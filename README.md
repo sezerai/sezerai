@@ -14,7 +14,7 @@ Yapay zekâ destekli sistemler, görüntü işleme, robotik ve veri odaklı sağ
 
 ### 🧠 Uzmanlık Alanlarım
 
-💡 **Yapay Zekâ & Makine Öğrenimi**
+💡 **Yapay Zekâ & Makine Öğrenimi**<br>
 🖼️ **Görüntü İşleme (Computer Vision)**
 🏥 **Sağlık Teknolojileri ve Akıllı Sistemler**
 ⚙️ **MVC Core & ASP.NET Core**
