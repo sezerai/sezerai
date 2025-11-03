@@ -87,7 +87,9 @@ I specialize in **AI, Computer Vision, and scalable architectures** that drive r
 
 ### 📊 GitHub Stats
 ![Sezer's GitHub stats](https://github-readme-stats.vercel.app/api?username=sezerai&show_icons=true&theme=dark)
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=sezerai&layout=compact&theme=dark)
+### 💬 Bildiğim Diller
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=sezerai&layout=compact&theme=tokyonight)
+
 
 
 ### 🤝 Connect with Me
