@@ -88,5 +88,5 @@ I specialize in **AI, Computer Vision, and scalable architectures** that drive r
 
 [![GitHub](https://img.shields.io/badge/GitHub-000?style=for-the-badge\&logo=github\&logoColor=white)](https://github.com/sezerai)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge\&logo=linkedin\&logoColor=white)](#)
-[![Website](https://img.shields.io/badge/Website-0078D4?style=for-the-badge\&logo=google-chrome\&logoColor=white)](#)
+[![Website](https://img.shields.io/badge/Website-0078D4?style=for-the-badge\&logo=google-chrome\&logoColor=white)]([#](https://kobisme.com.tr/))
 
