@@ -1,4 +1,5 @@
 # 👋 Hi there, I'm **SEZER AI**
+![Profile Views](https://komarev.com/ghpvc/?username=sezerai&color=blue)
 
 ### 💻 Software & Artificial Intelligence Engineer
 
