@@ -15,13 +15,13 @@ Yapay zekâ destekli sistemler, görüntü işleme, robotik ve veri odaklı sağ
 ### 🧠 Uzmanlık Alanlarım
 
 💡 **Yapay Zekâ & Makine Öğrenimi**<br>
-🖼️ **Görüntü İşleme (Computer Vision)**
-🏥 **Sağlık Teknolojileri ve Akıllı Sistemler**
-⚙️ **MVC Core & ASP.NET Core**
-📱 **Mobil Uygulama Geliştirme (Flutter, React Native)**
-🌐 **Web Teknolojileri (PHP, Node.js, REST API)**
-🐍 **Python, C#, JavaScript**
-☁️ **Bulut Mimari & Mikroservisler**
+🖼️ **Görüntü İşleme (Computer Vision)**<br>
+🏥 **Sağlık Teknolojileri ve Akıllı Sistemler**<br>
+⚙️ **MVC Core & ASP.NET Core**<br>
+📱 **Mobil Uygulama Geliştirme (Flutter, React Native)**<br>
+🌐 **Web Teknolojileri (PHP, Node.js, REST API)**<br>
+🐍 **Python, C#, JavaScript**<br>
+☁️ **Bulut Mimari & Mikroservisler**<br>
 
 ---
 
@@ -35,7 +35,30 @@ Yapay zekâ destekli sistemler, görüntü işleme, robotik ve veri odaklı sağ
 | 🩺 **SEZER AI Doktor**        | AI tabanlı teşhis ve veri analizi asistanı           |
 
 ---
+## 🚀 Hizmetlerim
 
+Yapay Zeka, Yazılım ve Dijital Dönüşüm alanlarında sunduğum profesyonel hizmetlerle iş süreçlerinizi iyileştirebilir ve yenilikçi çözümlerle rekabet avantajı elde edebilirsiniz.
+
+### 🤖 **Yapay Zeka Danışmanlığı**
+Yapay Zeka teknolojilerinin iş süreçlerinize entegrasyonunu sağlıyor, veri analizinden otomasyona kadar geniş bir yelpazede çözümler sunuyorum. Özelleştirilmiş yapay zeka modelleri ile verimliliğinizi artırabilirsiniz.
+
+### 🖥️ **Yazılım Geliştirme ve Danışmanlık**
+Yazılım geliştirme, özellikle web ve mobil uygulama çözümleri ile iş hedeflerinize ulaşmanızı sağlıyorum. MVC Core, PHP, Python ve Flutter gibi teknolojilerde deneyimim ile projelerinizi hayata geçiriyorum.
+
+### 📊 **Veri Analitiği ve Görselleştirme**
+Veri analitiği ve iş zekâsı çözümleri ile karar alma süreçlerinizi daha hızlı ve doğru hale getiriyorum. Python, R ve SQL tabanlı çözümlerle büyük veri kümelerinden anlamlı sonuçlar elde ediyorum.
+
+### 💡 **Dijital Dönüşüm ve Danışmanlık**
+Şirketlerin dijital dönüşüm süreçlerini hızlandırmak için özel stratejiler geliştiriyorum. Modern teknolojilerin iş yapış şekillerine entegre edilmesini sağlayarak, verimlilik ve iş süreçlerini optimize ediyorum.
+
+### 🌐 **Web Tasarımı ve Geliştirme**
+Modern ve kullanıcı dostu web siteleri tasarlayıp geliştiriyorum. Hedef kitlenize yönelik kullanıcı deneyimini (UX) iyileştirerek, etkileşim oranlarını artıracak projeler üretiyorum.
+
+### 📱 **Mobil Uygulama Geliştirme**
+Mobil uygulama geliştirme konusunda Flutter ve React Native kullanarak, hızlı ve etkili mobil çözümler sunuyorum. İşletmenizin mobilde de güçlü bir varlık göstermesini sağlıyorum.
+
+
+---
 ### 📚 Yayınlar & Araştırmalar
 
 📄 [ScienceOpen: AI-Driven Healthcare Systems](https://www.scienceopen.com/hosted-document?doi=10.14293/S2199-1006.1.SOR-.PPLA7EG.v1)
