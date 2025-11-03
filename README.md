@@ -41,6 +41,22 @@ Yapay zekâ destekli sistemler, görüntü işleme, robotik ve veri odaklı sağ
 📄 [ScienceOpen: AI-Driven Healthcare Systems](https://www.scienceopen.com/hosted-document?doi=10.14293/S2199-1006.1.SOR-.PPLA7EG.v1)
 
 ---
+## 📚 İncelemeler
+
+Yapay zekâ ve teknoloji dünyasında gerçekleştirdiğim derinlemesine incelemeleri, analizleri ve yazılarımdan bazılarına buradan erişebilirsiniz. Her yazı, konuyla ilgili önemli detayları ve benim kişisel bakış açımı içeriyor.
+
+---
+
+### 🤖 **Kontrolden Çıkan Yapay Zeka Kendi Dilini Yarattı**
+
+Yapay zekâ sistemlerinin kendi aralarında bağımsız bir dil geliştirerek haberleşmesi, günümüz bilgisayar mühendisliği ve yapay zekâ araştırmalarında üzerinde en çok tartışılan konulardan biridir. Bu “gizli dil” kavramı, yapay zekâların yalnızca önceden tanımlanmış algoritmaları çalıştıran deterministik yapılar olmaktan çıkarak, kendi iletişim protokollerini optimize edebilme potansiyeline işaret etmektedir.
+
+Peki, bu dil nedir, nasıl çalışmaktadır ve yapay zekâlar birbirleriyle hangi yöntemler üzerinden haberleşmektedir? Bu dilin tespit edilmesi veya engellenmesi teknik olarak mümkün müdür? Daha da önemlisi, yapay zekâların dil geliştirme ihtiyacı hangi teorik temellere dayanmakta ve nasıl ortaya çıkmış olabilir?
+
+👉 **Devamı:** [Kobisme.com - Yapay Zeka Kendi Dilini Yarattı](https://kobisme.com.tr/2025/10/07/yapay-zeka-kendi-dilini-yaratti/)
+
+
+---
 
 ## 🇬🇧 About Me
 
