@@ -55,7 +55,24 @@ Peki, bu dil nedir, nasıl çalışmaktadır ve yapay zekâlar birbirleriyle han
 
 👉 **Devamı:** [Kobisme.com - Yapay Zeka Kendi Dilini Yarattı](https://kobisme.com.tr/2025/10/07/yapay-zeka-kendi-dilini-yaratti/)
 
+---
+### ⚖️ **Yapay Zeka Kanun Teklifi**
 
+“Yapay zeka teknolojilerinin hızla gelişmesi ve hayatın birçok alanında yaygınlaşması, bu teknolojilerin kullanımını düzenlemek amacıyla kapsamlı yasal çerçeveler oluşturulmasını zorunlu kılmaktadır.” 
+
+Öncelikle belirtmek gerekir ki, bu yasal düzenlemeler Anayasa’nın değiştirilmesi sürecine kadar uzanan kapsamlı bir revizyon gerektirmektedir. Yapay zekanın hukuki tanımına bakıldığında, karşımıza multidisipliner bir sistem olarak çıkmaktadır. Konunun anayasal ve normatif açıdan kilit noktası işte bu multidisipliner yapıdır.
+
+👉 **Devamı:** [Kobisme.com - Yapay Zeka Kanun Teklifi](https://kobisme.com.tr/2025/10/06/yapay-zeka-kanun-teklifi/)
+
+---
+
+### 🤯 **Yapay Zekâ Modellerinde Halüsinasyon**
+
+Yapay Zekâ halüsinasyon Olgusu ChatGPT, Grok ve DeepSeek gibi büyük dil modelleri (Large Language Models, LLM), doğal dil işleme (NLP) alanında önemli bir paradigma değişimini temsil etmektedir. Bu modeller, geniş ölçekli veri kümeleri üzerinde eğitilen derin sinir ağları aracılığıyla istatistiksel dil örüntülerini öğrenmekte ve insan benzeri metin üretme kapasitesine ulaşmaktadır. Ancak, bu sistemler “gerçeklik tabanlı doğruluk” ile “istatistiksel tutarlılık” arasındaki farktan dolayı sıklıkla Yapay Zekâ halüsinasyon (hallucination) olarak adlandırılan olguyu üretmektedir.
+
+Yapay Zekâ halüsinasyon, modelin dilsel olarak tutarlı fakat nesnel gerçeklikten kopuk, yanlış veya uydurma bilgiler üretmesi olarak tanımlanır.
+
+👉 **Devamı:** [Kobisme.com - Yapay Zeka Halüsinasyon](https://kobisme.com.tr/yapay-zeka-halusinasyon-2025/)
 ---
 
 ## 🇬🇧 About Me
