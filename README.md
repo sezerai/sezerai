@@ -83,7 +83,6 @@ I specialize in **AI, Computer Vision, and scalable architectures** that drive r
 💡 **Mission:** To integrate AI into every aspect of human life — ensuring efficiency, safety, and innovation.
 
 ---
-<img src="https://via.placeholder.com/600x200?text=SEZER+AI+Robot+Hemşire" alt="Robot Nurse Banner"/>
 
 ### 📊 GitHub Stats
 ![Sezer's GitHub stats](https://github-readme-stats.vercel.app/api?username=sezerai&show_icons=true&theme=dark)
