@@ -41,7 +41,7 @@ Yapay zekâ destekli sistemler, görüntü işleme, robotik ve veri odaklı sağ
 📄 [ScienceOpen: AI-Driven Healthcare Systems](https://www.scienceopen.com/hosted-document?doi=10.14293/S2199-1006.1.SOR-.PPLA7EG.v1)
 
 ---
-## 📚 İncelemeler
+## 📚 İnceleme Yazılarım
 
 Yapay zekâ ve teknoloji dünyasında gerçekleştirdiğim derinlemesine incelemeleri, analizleri ve yazılarımdan bazılarına buradan erişebilirsiniz. Her yazı, konuyla ilgili önemli detayları ve benim kişisel bakış açımı içeriyor.
 
