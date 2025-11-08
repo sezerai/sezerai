@@ -1,3 +1,6 @@
+![Ziyaretçi](https://visitor-badge.laobi.icu/badge?page_id=sezerai.ai-login-form)
+![Ziyaretçi](https://komarev.com/ghpvc/?username=sezerai&color=blue)
+
 # Yapay Zeka Destekli Login Formu 🤖
 
 Bu proje, yapay zeka teknolojileriyle güçlendirilmiş modern bir login formu uygulamasıdır. Kullanıcı girişlerini gerçek zamanlı analiz ederek gelişmiş güvenlik sağlar.
@@ -123,3 +126,20 @@ Discussions sayfasına göz atın
 Issues kısmında soru sorun
 
 Doğrudan email gönderin
+
+![Sezer's GitHub stats](https://github-readme-stats.vercel.app/api?username=sezerai&show_icons=true&theme=radical)
+
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=sezerai&layout=compact&theme=radical)
+
+![GitHub Streak](https://streak-stats.demolab.com/?user=sezerai&theme=radical)
+
+
+![Repo Size](https://img.shields.io/github/repo-size/sezerai/ai-login-form)
+![Last Commit](https://img.shields.io/github/last-commit/sezerai/ai-login-form)
+![Languages](https://img.shields.io/github/languages/count/sezerai/ai-login-form)
+![License](https://img.shields.io/github/license/sezerai/ai-login-form)
+
+
+![GitHub Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=sezerai&theme=github)
+
+
