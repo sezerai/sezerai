@@ -220,7 +220,7 @@ Copyright (c) 2024 Sezer AI
 
 - 🐛 **Hata Bildirimi:** [GitHub Issues](https://github.com/sezerai/ai-login-form/issues)
 - 💬 **Sorular:** [GitHub Discussions](https://github.com/sezerai/ai-login-form/discussions)
-- 📧 **E-posta:** `sezer@example.com`
+- 📧 **E-posta:** `sezerconsultancy@gmail.com`
 - 🌐 **Website:** [https://sezerai.github.io](https://sezerai.github.io)
 
 ## 🌟 Destek Olun
