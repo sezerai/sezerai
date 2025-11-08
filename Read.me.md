@@ -40,3 +40,49 @@ Bu proje, yapay zeka teknolojileriyle güçlendirilmiş modern bir login formu u
 ```bash
 git clone <repository-url>
 cd ai-login-form
+
+ai-login-form/
+├── 📄 index.html          # Ana uygulama dosyası
+├── 🎨 style.css           # Stil ve animasyonlar
+├── ⚡ script.js           # AI mantığı ve işlevsellik
+├── 📖 README.md           # Bu dosya
+├── 📜 LICENSE            # Lisans dosyası
+└── 🛡️ SECURITY.md        # Güvenlik politikası
+
+📋 Katkı Süreci
+🍴 Repository'yi fork edin
+
+🌿 Yeni branch oluşturun (git checkout -b feature/amazing-feature)
+
+💾 Değişiklikleri commit edin (git commit -m 'Add amazing feature')
+
+📤 Branch'i push edin (git push origin feature/amazing-feature)
+
+🔄 Pull Request oluşturun
+
+🐛 Hata Bildirimi
+Hata bulursanız Issue açabilirsiniz.
+
+📈 Versiyon Geçmişi
+Versiyon	Tarih	Özellikler
+v1.0.0	2024	İlk kararlı sürüm
+v0.2.0	2024	AI CAPTCHA eklendi
+v0.1.0	2024	Temel AI analiz özellikleri
+🛡️ Güvenlik
+Güvenlik açıkları için lütfen SECURITY.md dosyasını inceleyin.
+
+Önemli Not: Bu şu anda frontend-only bir demo uygulamasıdır. Production kullanımı için backend güvenlik önlemleri eklenmelidir.
+
+📄 Lisans
+Bu proje MIT lisansı altında lisanslanmıştır. Detaylar için LICENSE dosyasına bakın.
+
+text
+MIT License
+
+Copyright (c) 2024 [İsim]
+
+İzinler ücretsiz olarak verilir...
+👥 Katkıda Bulunanlar
+Bu harika insanlara teşekkürler 🙏:
+
+<!-- ALL-CONTRIBUTORS-LIST:START --><!-- prettier-ignore --><table> <tr> <td align="center"><a href="https://github.com/sezerai"><img src="https://avatars.githubusercontent.com/u/xxx?v=4" width="100px;" alt="sezerai"/><br /><sub><b>SEZER AI</b></sub></a><br />💻</td> <td align="center"><br />🎨</td> </tr> </table> <!-- ALL-CONTRIBUTORS-LIST:END -->
