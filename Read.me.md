@@ -82,7 +82,8 @@ MIT License
 Copyright (c) 2024 [İsim]
 
 İzinler ücretsiz olarak verilir...
+
 👥 Katkıda Bulunanlar
 Bu harika insanlara teşekkürler 🙏:
 
-<!-- ALL-CONTRIBUTORS-LIST:START --><!-- prettier-ignore --><table> <tr> <td align="center"><a href="https://github.com/sezerai"><img src="https://avatars.githubusercontent.com/u/xxx?v=4" width="100px;" alt="sezerai"/><br /><sub><b>SEZER AI</b></sub></a><br />💻</td> <td align="center"><br />🎨</td> </tr> </table> <!-- ALL-CONTRIBUTORS-LIST:END -->
+<!-- ALL-CONTRIBUTORS-LIST:START --><!-- prettier-ignore --><table> <tr> <td align="center"><a href="https://github.com/sezerai"><img src="https://avatars.githubusercontent.com/u/149322973?v=4" width="100px;" alt="Sezer AI"/><br /><sub><b>Sezer AI</b></sub></a><br />🤖 AI Geliştirici</td> </tr> </table> <!-- ALL-CONTRIBUTORS-LIST:END -->
