@@ -12,7 +12,7 @@
 
 [![Portfolio](https://img.shields.io/badge/🌐_Portfolio-Website-0078D4?style=for-the-badge&logo=google-chrome&logoColor=white)](https://kobisme.com.tr)
 [![LinkedIn](https://img.shields.io/badge/💼_LinkedIn-Profile-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](#)
-[![Email](https://img.shields.io/badge/📧_Email-Contact-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:sezer@example.com)
+[![Email](https://img.shields.io/badge/📧_Email-Contact-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:sezerdeveloper@gmail.com)
 
 </div>
 
@@ -208,7 +208,7 @@
 
 ### 🤝 **Birlikte Çalışalım!**
 
-[![Email](https://img.shields.io/badge/📧_sezer@example.com-Contact-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:sezer@example.com)
+[![Email](https://img.shields.io/badge/📧_sezer@example.com-Contact-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:sezerdeveloper@gmail.com)
 [![Website](https://img.shields.io/badge/🌐_Portfolio-Visit-0078D4?style=for-the-badge&logo=google-chrome&logoColor=white)](https://kobisme.com.tr)
 [![LinkedIn](https://img.shields.io/badge/💼_LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](#)
 [![GitHub](https://img.shields.io/badge/🐙_GitHub-Follow-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/sezerai)
