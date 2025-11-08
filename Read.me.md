@@ -83,7 +83,43 @@ Copyright (c) 2024 [İsim]
 
 İzinler ücretsiz olarak verilir...
 
-👥 Katkıda Bulunanlar
-Bu harika insanlara teşekkürler 🙏:
+📋 Katkı Süreci
+Fork Edin 🍴 - Repository'yi kendi hesabınıza fork edin
 
-<!-- ALL-CONTRIBUTORS-LIST:START --><!-- prettier-ignore --><table> <tr> <td align="center"><a href="https://github.com/sezerai"><img src="https://avatars.githubusercontent.com/u/149322973?v=4" width="100px;" alt="Sezer AI"/><br /><sub><b>Sezer AI</b></sub></a><br />🤖 AI Geliştirici</td> </tr> </table> <!-- ALL-CONTRIBUTORS-LIST:END -->
+Branch Oluşturun 🌿 - git checkout -b feature/yeni-ozellik
+
+Değişiklik Yapın 💻 - Kodunuzu yazın ve test edin
+
+Commit Edin 💾 - git commit -m 'Yeni özellik: Açıklama'
+
+Push Edin 📤 - git push origin feature/yeni-ozellik
+
+PR Açın 🔄 - Pull Request oluşturun
+
+🏷️ Commit Kuralları
+Emoji	Tür	Açıklama
+🐛	fix	Hata düzeltme
+✨	feat	Yeni özellik
+📚	docs	Dokümantasyon
+🎨	style	Tasarım/UI değişiklikleri
+♻️	refactor	Kod iyileştirme
+⚡	perf	Performans iyileştirme
+🧪	test	Test ekleme/düzeltme
+🔍 Kod İnceleme Süreci
+Otomatik Testler - GitHub Actions ile testler çalışır
+
+Manuel İnceleme - Maintainer'lar kodunuzu inceler
+
+Feedback - Gerekli düzeltmeler için geri bildirim
+
+Onay - PR merge edilir
+
+🎉 İlk Katkıda Bulunanlar
+Open Source dünyasına yeni mi adım atıyorsunuz? İşte başlamak için harika bir proje! "good first issue" etiketli issue'lar sizin için mükemmel.
+
+📞 Sorularınız mı var?
+Discussions sayfasına göz atın
+
+Issues kısmında soru sorun
+
+Doğrudan email gönderin
