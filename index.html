@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yapay Zeka Destekli Login Formu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="login-card">
+            <div class="ai-status">
+                <div class="ai-indicator" id="aiIndicator">
+                    <span class="ai-dot"></span>
+                    AI Aktif
+                </div>
+                <div class="risk-level" id="riskLevel">Düşük Risk</div>
+            </div>
+            
+            <h2>Giriş Yap</h2>
+            <p class="subtitle">Yapay zeka güvenliği ile korunuyor</p>
+            
+            <form id="loginForm">
+                <div class="input-group">
+                    <label for="username">Kullanıcı Adı</label>
+                    <input type="text" id="username" name="username" required>
+                    <div class="input-feedback" id="usernameFeedback"></div>
+                </div>
+                
+                <div class="input-group">
+                    <label for="password">Şifre</label>
+                    <input type="password" id="password" name="password" required>
+                    <div class="input-feedback" id="passwordFeedback"></div>
+                </div>
+                
+                <div class="ai-captcha" id="aiCaptcha">
+                    <div class="captcha-question" id="captchaQuestion"></div>
+                    <input type="text" id="captchaAnswer" placeholder="Cevabınızı girin">
+                    <div class="captcha-feedback" id="captchaFeedback"></div>
+                </div>
+                
+                <div class="behavior-analysis">
+                    <div class="analysis-text">Davranış analizi yapılıyor...</div>
+                    <div class="analysis-progress">
+                        <div class="progress-bar" id="progressBar"></div>
+                    </div>
+                </div>
+                
+                <button type="submit" class="login-btn" id="loginBtn" disabled>
+                    <span class="btn-text">Giriş Yap</span>
+                    <div class="btn-loader" id="btnLoader"></div>
+                </button>
+            </form>
+            
+            <div class="security-info">
+                <h3>AI Güvenlik Özellikleri</h3>
+                <ul>
+                    <li>✅ Davranışsal analiz</li>
+                    <li>✅ Risk tabanlı kimlik doğrulama</li>
+                    <li>✅ Akıllı CAPTCHA</li>
+                    <li>✅ Anomali tespiti</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="ai-log" id="aiLog">
+            <h4>AI Aktivite Logu</h4>
+            <div class="log-content" id="logContent"></div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
