@@ -1,0 +1,45 @@
+@model List<BlogKartDto>
+
+<section class="relative h-48 sm:h-64 overflow-hidden">
+    <img src="/images/projects/sezerai-logo-variant.jfif" alt="SEZER AI Technology Blog" class="absolute inset-0 w-full h-full object-cover" width="1920" height="256" />
+    <div class="absolute inset-0 hero-overlay"></div>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-end pb-8">
+        <h1 class="text-3xl sm:text-4xl font-extrabold text-white">Blog</h1>
+    </div>
+</section>
+
+<nav aria-label="Breadcrumb" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 text-sm text-text-light">
+    <ol class="flex items-center flex-wrap gap-1">
+        <li><a href="/" class="hover:text-primary transition-colors">Anasayfa</a></li>
+        <li aria-hidden="true">/</li>
+        <li class="text-text-dark font-medium">Blog</li>
+    </ol>
+</nav>
+
+<section class="py-12 sm:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="sr-only">Tüm Blog Yazıları</h2>
+        @if (!Model.Any())
+        {
+            <p class="text-text-light text-center py-12">Henüz yayınlanmış bir yazı bulunmuyor. Yakında burada olacak.</p>
+        }
+        else
+        {
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                @foreach (var yazi in Model)
+                {
+                    <a href="/blog/@yazi.Slug" class="group bg-white rounded-lg gold-border-card overflow-hidden scroll-reveal">
+                        <div class="relative h-44 bg-surface-alt overflow-hidden">
+                            <img src="@yazi.KapakGorseli" alt="@yazi.Baslik" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" width="400" height="220" />
+                        </div>
+                        <div class="p-5">
+                            <p class="text-xs text-text-light mb-2">@yazi.YayinTarihi.ToString("dd MMMM yyyy") · @yazi.Yazar</p>
+                            <h3 class="text-lg font-bold text-text-dark group-hover:text-primary transition-colors mb-2">@yazi.Baslik</h3>
+                            <p class="text-sm text-text-light leading-relaxed">@yazi.Ozet</p>
+                        </div>
+                    </a>
+                }
+            </div>
+        }
+    </div>
+</section>

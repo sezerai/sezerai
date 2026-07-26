@@ -1,0 +1,144 @@
+@model AnaSayfaViewModel
+
+<!-- HERO BANNER - sabit, degistirilmeyecek bolum -->
+<section class="relative min-h-[50vh] sm:min-h-[65vh] lg:h-[700px] overflow-hidden">
+    <img src="/images/banner-hero.jfif" alt="SEZER AI Technology - Yapay zeka destekli yazılımlar ve akıllı çözümlerle geleceği şekillendiriyoruz" class="absolute inset-0 w-full h-full object-cover" width="1920" height="700" />
+    <div class="absolute inset-0 hero-overlay"></div>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
+        <div class="max-w-2xl">
+            <div class="flex items-center gap-3 mb-6">
+                <img src="/images/logo-sezerai.png" alt="SEZER AI logosu" width="64" height="64" class="w-14 h-14 sm:w-16 sm:h-16" />
+                <div>
+                    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight">SEZER AI Technology</h1>
+                    <p class="text-gold-light text-lg sm:text-xl font-semibold italic">Shaping the Future</p>
+                </div>
+            </div>
+            <p class="text-white/90 text-base sm:text-lg leading-relaxed mb-8 max-w-xl">Yapay zeka destekli yazılımlar ve akıllı çözümlerle işletmelerin geleceğini birlikte şekillendiriyoruz. 2019'dan bu yana sağlık sektöründe Ar-Ge ve inovasyon.</p>
+            <div class="flex flex-col sm:flex-row gap-4">
+                <partial name="_Button" model="@(new SezerAiWeb.Web.Models.ButtonModel { Metin = "Projelerimizi Keşfedin", Href = "/projelerimiz", Varyant = "dolu-altin" })" />
+                <partial name="_Button" model="@(new SezerAiWeb.Web.Models.ButtonModel { Metin = "İletişime Geçin", Href = "/iletisim", Varyant = "dis-hat-beyaz" })" />
+            </div>
+        </div>
+    </div>
+</section>
+<!-- /HERO BANNER -->
+
+<section class="py-10 sm:py-12 bg-white border-b border-border" aria-label="Odak Alanlarımız ve Projelerimiz">
+    <p class="text-center text-xs font-semibold uppercase tracking-widest text-text-light mb-8">Yapay Zeka Çözümleri Geliştirdiğimiz Alanlar</p>
+    <div class="marquee-wrap">
+        <div class="marquee-track">
+            @{
+                var marqueeOgeleri = new (string Gorsel, string Etiket)[]
+                {
+                    ("/images/logo-sezerai.png", "SEZER AI"),
+                    ("/images/projects/robot-hemsire-kart.svg", "Robot Hemşire"),
+                    ("/images/projects/ai-hospital-kart.svg", "AI Hospital"),
+                    ("/images/projects/ai-freeluncher-kart.svg", "AI Freeluncher"),
+                    ("/images/projects/aibazaar-3d-logo.jfif", "AIBazaar"),
+                    ("/images/projects/sezerai-badge.jfif", "SEZER AI Badge"),
+                    ("/images/projects/trai-logo.jfif", "TRAI"),
+                };
+            }
+            @for (var tur = 0; tur < 2; tur++)
+            {
+                foreach (var oge in marqueeOgeleri)
+                {
+                    <div class="marquee-item shrink-0 flex flex-col items-center gap-2 mx-8" aria-hidden="@(tur == 1 ? "true" : null)">
+                        <img src="@oge.Gorsel" alt="@oge.Etiket" class="w-14 h-14 sm:w-16 sm:h-16 object-contain rounded-full" loading="lazy" width="64" height="64" />
+                        <span class="text-xs text-text-light whitespace-nowrap">@oge.Etiket</span>
+                    </div>
+                }
+            }
+        </div>
+    </div>
+</section>
+
+<section class="py-16 sm:py-24 bg-ink" aria-label="Rakamlarla SEZER AI">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="sr-only">Rakamlarla SEZER AI Technology</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 sm:gap-6 text-center">
+            <div class="scroll-reveal">
+                <p class="text-5xl sm:text-6xl lg:text-7xl font-extrabold gold-gradient-text leading-none tracking-tight">2019</p>
+                <p class="text-white/50 text-xs sm:text-sm mt-3 uppercase tracking-wider">Kuruluş Yılı</p>
+            </div>
+            <div class="scroll-reveal">
+                <p class="text-5xl sm:text-6xl lg:text-7xl font-extrabold gold-gradient-text leading-none tracking-tight">4+</p>
+                <p class="text-white/50 text-xs sm:text-sm mt-3 uppercase tracking-wider">Aktif Proje</p>
+            </div>
+            <div class="scroll-reveal">
+                <p class="text-5xl sm:text-6xl lg:text-7xl font-extrabold gold-gradient-text leading-none tracking-tight">%100</p>
+                <p class="text-white/50 text-xs sm:text-sm mt-3 uppercase tracking-wider">Yapay Zeka Odaklı</p>
+            </div>
+            <div class="scroll-reveal">
+                <p class="text-5xl sm:text-6xl lg:text-7xl font-extrabold gold-gradient-text leading-none tracking-tight">Global</p>
+                <p class="text-white/50 text-xs sm:text-sm mt-3 uppercase tracking-wider">Büyüme Hedefi</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-20 sm:py-32 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+            <div class="lg:col-span-4 scroll-reveal">
+                <p class="text-xs font-bold uppercase tracking-widest text-gold-dark mb-4">Hakkımızda</p>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-text-dark leading-[1.05] tracking-tight">Sağlıkta yapay zekayla geleceği inşa ediyoruz.</h2>
+            </div>
+            <div class="lg:col-span-7 lg:col-start-6 scroll-reveal">
+                <p class="text-text-light text-lg sm:text-xl leading-relaxed mb-6"><strong class="text-text-dark">SETINT AI Robotic Sistem Eğitim ve Danışmanlık San. ve Tic. A.Ş.</strong>, 2019 yılında Düzce Üniversitesi Teknopark bünyesinde kurulmuştur. Sağlık sektöründe yapay zeka destekli Ar-Ge çalışmaları yürüterek, yurt içi ve yurt dışında yenilikçi çözümler sunmayı hedeflemektedir.</p>
+                <p class="text-text-light text-lg sm:text-xl leading-relaxed">Uluslararası iş birlikleri kurarak AI destekli sağlık ve eğitim çözümlerini küresel ölçekte yaygınlaştırmayı amaçlamaktayız.</p>
+                <a href="/hakkimizda" class="inline-flex items-center gap-2 mt-8 text-ink font-semibold border-b-2 border-gold pb-1 hover:text-gold-dark hover:border-gold-dark transition-colors">
+                    Daha Fazla Bilgi
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-20 sm:py-32 bg-ink">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-14 scroll-reveal">
+            <div>
+                <p class="text-xs font-bold uppercase tracking-widest text-gold-dark mb-4">Projelerimiz</p>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight tracking-tight">Yapay zeka teknolojileriyle <br class="hidden sm:block" />geliştirdiğimiz çözümler.</h2>
+            </div>
+            <a href="/projelerimiz" class="text-sm font-semibold text-silver hover:text-gold-light transition-colors shrink-0">Tüm Projeler →</a>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            @foreach (var proje in Model.Projeler)
+            {
+                <partial name="_ProjeKart" model="proje" />
+            }
+        </div>
+    </div>
+</section>
+
+@if (Model.SonBlogYazilari.Any())
+{
+    <section class="py-20 sm:py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-end justify-between mb-14 scroll-reveal">
+                <div>
+                    <p class="text-xs font-bold uppercase tracking-widest text-gold-dark mb-4">Blog</p>
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-text-dark leading-tight tracking-tight">Son yazılarımız</h2>
+                </div>
+                <a href="/blog" class="text-sm font-semibold text-text-dark hover:text-gold-dark transition-colors shrink-0">Tüm Yazılar →</a>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                @foreach (var yazi in Model.SonBlogYazilari)
+                {
+                    <a href="/blog/@yazi.Slug" class="group bg-white rounded-2xl gold-border-card overflow-hidden scroll-reveal">
+                        <div class="relative h-48 bg-surface-alt overflow-hidden">
+                            <img src="@yazi.KapakGorseli" alt="@yazi.Baslik" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" width="400" height="200" />
+                        </div>
+                        <div class="p-6">
+                            <p class="text-xs text-text-light mb-2">@yazi.YayinTarihi.ToString("dd MMMM yyyy")</p>
+                            <h3 class="text-lg font-bold text-text-dark group-hover:text-gold-dark transition-colors">@yazi.Baslik</h3>
+                        </div>
+                    </a>
+                }
+            </div>
+        </div>
+    </section>
+}

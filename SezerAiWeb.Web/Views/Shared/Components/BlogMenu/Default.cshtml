@@ -1,0 +1,28 @@
+@using SezerAiWeb.Web.ViewComponents
+@model BlogMenuModel
+
+@if (Model.Mobil)
+{
+    <div class="pl-4">
+        @foreach (var yazi in Model.Yazilar)
+        {
+            <a href="/blog/@yazi.Slug" class="block px-8 py-3 min-h-[44px] text-sm text-white/70 hover:bg-white/5 hover:text-gold-light" onclick="closeMobileMenu()">@yazi.Baslik</a>
+        }
+    </div>
+}
+else
+{
+    <div class="dropdown-menu absolute top-full left-0 w-80 bg-ink rounded-xl shadow-2xl border border-white/10 py-3 mt-2 hidden">
+        @foreach (var yazi in Model.Yazilar)
+        {
+            <a href="/blog/@yazi.Slug" class="flex items-center gap-3 px-4 py-2.5 mx-2 rounded-lg hover:bg-white/5 transition-colors">
+                <img src="@yazi.KapakGorseli" alt="@yazi.Baslik" class="w-12 h-12 rounded-md object-cover shrink-0" loading="lazy" />
+                <span class="min-w-0">
+                    <span class="block text-sm font-semibold text-white truncate">@yazi.Baslik</span>
+                    <span class="block text-xs text-white/50 mt-0.5">@yazi.YayinTarihi.ToString("dd MMMM yyyy")</span>
+                </span>
+            </a>
+        }
+        <a href="/blog" class="block px-6 py-2.5 mt-1 text-xs font-semibold text-gold-light hover:text-gold-light/80">Tüm Yazılar →</a>
+    </div>
+}

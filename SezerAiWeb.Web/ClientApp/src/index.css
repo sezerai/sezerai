@@ -1,0 +1,370 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 262 83% 58%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 262 83% 58%;
+    --radius: 0.5rem;
+
+    /* Material Design 3 Color Tokens */
+    --md-sys-color-primary: #6750A4;
+    --md-sys-color-on-primary: #FFFFFF;
+    --md-sys-color-primary-container: #EADDFF;
+    --md-sys-color-on-primary-container: #21005D;
+    --md-sys-color-surface: #FEF7FF;
+    --md-sys-color-on-surface: #1D1B20;
+    --md-sys-color-on-surface-variant: #49454F;
+    --md-sys-color-outline: #79747E;
+
+    /* Glassmorphic Background */
+    --glass-bg: rgba(255, 255, 255, 0.7);
+    --glass-dark-bg: rgba(240, 237, 255, 0.4);
+    --glass-border: rgba(255, 255, 255, 0.18);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background: 240 10% 3.9%;
+      --foreground: 0 0% 98%;
+      --card: 240 10% 3.9%;
+      --card-foreground: 0 0% 98%;
+      --popover: 240 10% 3.9%;
+      --popover-foreground: 0 0% 98%;
+      --primary: 263 70% 50.4%;
+      --primary-foreground: 0 0% 98%;
+      --secondary: 240 3.7% 15.9%;
+      --secondary-foreground: 0 0% 98%;
+      --muted: 240 3.7% 15.9%;
+      --muted-foreground: 240 5% 64.9%;
+      --accent: 240 3.7% 15.9%;
+      --accent-foreground: 0 0% 98%;
+      --destructive: 0 62.8% 30.6%;
+      --destructive-foreground: 0 0% 98%;
+      --border: 240 3.7% 15.9%;
+      --input: 240 3.7% 15.9%;
+      --ring: 263 70% 50.4%;
+
+      --md-sys-color-surface: #1D1B20;
+      --md-sys-color-on-surface: #E6E0E9;
+      --md-sys-color-on-surface-variant: #CAC4D0;
+
+      --glass-bg: rgba(29, 27, 32, 0.7);
+      --glass-dark-bg: rgba(20, 18, 24, 0.5);
+      --glass-border: rgba(255, 255, 255, 0.12);
+    }
+  }
+}
+
+@layer base {
+  * {
+    border-color: hsl(var(--border));
+  }
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-feature-settings: "rlig" 1, "calt" 1;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer components {
+  /* SEZER AI OS Glassmorphic Styles */
+  .glass {
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border: 1px solid var(--glass-border);
+  }
+
+  .glass-dark {
+    background: var(--glass-dark-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+  }
+
+  .mac-shadow {
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08),
+                0 4px 16px rgba(0, 0, 0, 0.04),
+                0 2px 8px rgba(0, 0, 0, 0.02);
+  }
+
+  .rounded-panel-radius {
+    border-radius: 16px;
+  }
+
+  .custom-scroll::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  .custom-scroll::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .custom-scroll::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+  }
+
+  .custom-scroll::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.3);
+  }
+
+  /* Material Design 3 Typography */
+  .font-display-lg {
+    font-size: 57px;
+    line-height: 64px;
+    font-weight: 400;
+    letter-spacing: -0.25px;
+  }
+
+  .font-display-md {
+    font-size: 45px;
+    line-height: 52px;
+    font-weight: 400;
+  }
+
+  .font-display-sm {
+    font-size: 36px;
+    line-height: 44px;
+    font-weight: 400;
+  }
+
+  .font-headline-lg {
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: 400;
+  }
+
+  .font-headline-md {
+    font-size: 28px;
+    line-height: 36px;
+    font-weight: 400;
+  }
+
+  .font-headline-sm {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 400;
+  }
+
+  .font-title-lg {
+    font-size: 22px;
+    line-height: 28px;
+    font-weight: 400;
+  }
+
+  .font-title-md {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    letter-spacing: 0.15px;
+  }
+
+  .font-title-sm {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+    letter-spacing: 0.1px;
+  }
+
+  .font-body-lg {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+  }
+
+  .font-body-md {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    letter-spacing: 0.25px;
+  }
+
+  .font-body-sm {
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 400;
+    letter-spacing: 0.4px;
+  }
+
+  .font-label-lg {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+    letter-spacing: 0.1px;
+  }
+
+  .font-label-md {
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+  }
+
+  .font-label-sm {
+    font-size: 11px;
+    line-height: 16px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+  }
+
+  .font-label-xs {
+    font-size: 10px;
+    line-height: 14px;
+    font-weight: 400;
+    letter-spacing: 0.4px;
+  }
+
+  .text-display-lg {
+    font-size: 57px;
+    line-height: 64px;
+    font-weight: 400;
+    letter-spacing: -0.25px;
+  }
+
+  .text-display-md {
+    font-size: 45px;
+    line-height: 52px;
+    font-weight: 400;
+  }
+
+  .text-display-sm {
+    font-size: 36px;
+    line-height: 44px;
+    font-weight: 400;
+  }
+
+  .text-headline-lg {
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: 400;
+  }
+
+  .text-headline-md {
+    font-size: 28px;
+    line-height: 36px;
+    font-weight: 400;
+  }
+
+  .text-headline-sm {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 400;
+  }
+
+  .text-title-lg {
+    font-size: 22px;
+    line-height: 28px;
+    font-weight: 400;
+  }
+
+  .text-title-md {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    letter-spacing: 0.15px;
+  }
+
+  .text-title-sm {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+    letter-spacing: 0.1px;
+  }
+
+  .text-body-lg {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+  }
+
+  .text-body-md {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    letter-spacing: 0.25px;
+  }
+
+  .text-body-sm {
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 400;
+    letter-spacing: 0.4px;
+  }
+
+  .text-label-lg {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+    letter-spacing: 0.1px;
+  }
+
+  .text-label-md {
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+  }
+
+  .text-label-sm {
+    font-size: 11px;
+    line-height: 16px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+  }
+
+  .text-label-xs {
+    font-size: 10px;
+    line-height: 14px;
+    font-weight: 400;
+    letter-spacing: 0.4px;
+  }
+
+  /* Material Design 3 Color Tokens */
+  .text-on-surface {
+    color: var(--md-sys-color-on-surface);
+  }
+
+  .text-on-surface-variant {
+    color: var(--md-sys-color-on-surface-variant);
+  }
+
+  .bg-surface {
+    background-color: var(--md-sys-color-surface);
+  }
+
+  .bg-primary {
+    background-color: var(--md-sys-color-primary);
+  }
+
+  .text-primary {
+    color: var(--md-sys-color-primary);
+  }
+}

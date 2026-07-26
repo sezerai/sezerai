@@ -1,0 +1,107 @@
+<header class="sticky top-0 z-50 bg-ink/90 backdrop-blur-md border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16 sm:h-20">
+            <a href="/" class="flex items-center gap-3 shrink-0">
+                <img src="/images/logo-sezerai.png" alt="SEZER AI Technology logosu" width="48" height="48" class="w-10 h-10 sm:w-12 sm:h-12" />
+                <div class="hidden sm:block">
+                    <span class="text-lg font-bold text-white">SEZER AI</span>
+                    <span class="block text-xs text-silver">Technology</span>
+                </div>
+            </a>
+            <nav class="hidden md:flex items-center gap-1 bg-white/5 rounded-full px-1.5 py-1.5" aria-label="Ana menü">
+                <a href="/" class="px-4 py-2 text-sm font-medium text-white/80 hover:text-gold-light transition-colors rounded-full min-h-[36px] flex items-center">Anasayfa</a>
+                <div class="relative dropdown-trigger">
+                    <a href="/hakkimizda" class="px-4 py-2 text-sm font-medium text-white/80 hover:text-gold-light transition-colors rounded-full min-h-[36px] flex items-center">
+                        Hakkımızda
+                        <svg class="inline-block w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </a>
+                    <div class="dropdown-menu absolute top-full left-0 w-72 bg-ink rounded-xl shadow-2xl border border-white/10 py-3 mt-2 hidden">
+                        <a href="/hakkimizda#hikaye" class="block px-4 py-2.5 mx-2 rounded-lg hover:bg-white/5 transition-colors">
+                            <span class="block text-sm font-semibold text-white">Kuruluş Hikayemiz</span>
+                            <span class="block text-xs text-white/50 mt-0.5">2019'dan bugüne yolculuğumuz</span>
+                        </a>
+                        <a href="/hakkimizda#vizyon-misyon" class="block px-4 py-2.5 mx-2 rounded-lg hover:bg-white/5 transition-colors">
+                            <span class="block text-sm font-semibold text-white">Vizyon &amp; Misyon</span>
+                            <span class="block text-xs text-white/50 mt-0.5">Hedeflerimiz ve yaklaşımımız</span>
+                        </a>
+                        <a href="/hakkimizda#hedefler" class="block px-4 py-2.5 mx-2 rounded-lg hover:bg-white/5 transition-colors">
+                            <span class="block text-sm font-semibold text-white">Uluslararası Hedefler</span>
+                            <span class="block text-xs text-white/50 mt-0.5">Küresel büyüme stratejimiz</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="relative dropdown-trigger">
+                    <a href="/projelerimiz" class="px-4 py-2 text-sm font-medium text-white/80 hover:text-gold-light transition-colors rounded-full min-h-[36px] flex items-center">
+                        Projelerimiz
+                        <svg class="inline-block w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </a>
+                    @await Component.InvokeAsync("ProjeMenu", new { mobil = false })
+                </div>
+                <div class="relative dropdown-trigger">
+                    <a href="/blog" class="px-4 py-2 text-sm font-medium text-white/80 hover:text-gold-light transition-colors rounded-full min-h-[36px] flex items-center">
+                        Blog
+                        <svg class="inline-block w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </a>
+                    @await Component.InvokeAsync("BlogMenu", new { mobil = false })
+                </div>
+                <div class="relative dropdown-trigger">
+                    <a href="/iletisim" class="px-4 py-2 text-sm font-medium text-white/80 hover:text-gold-light transition-colors rounded-full min-h-[36px] flex items-center">
+                        İletişim
+                        <svg class="inline-block w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </a>
+                    <div class="dropdown-menu absolute top-full right-0 w-72 bg-ink rounded-xl shadow-2xl border border-white/10 p-5 mt-2 hidden">
+                        <p class="text-xs font-bold uppercase tracking-widest text-gold-dark mb-3">Bize Ulaşın</p>
+                        <a href="tel:+905411955304" class="block text-sm text-white/80 hover:text-gold-light transition-colors py-1.5">+90 541 195 53 04</a>
+                        <p class="text-sm text-white/50 py-1.5">Düzce Üniversitesi Teknopark, Düzce</p>
+                        <a href="/iletisim" class="pill-btn inline-flex items-center justify-center w-full mt-3 px-4 py-2.5 bg-gold text-ink text-sm font-semibold hover:bg-gold-light transition-colors">Mesaj Gönder</a>
+                    </div>
+                </div>
+            </nav>
+            <a href="/iletisim" class="pill-btn hidden md:flex ml-4 px-5 py-2.5 bg-gold text-ink text-sm font-semibold hover:bg-gold-light transition-colors min-h-[44px] items-center">Bize Ulaşın</a>
+            <button onclick="toggleMobileMenu()" class="md:hidden p-2 -mr-2 text-white min-h-[44px] min-w-[44px] flex items-center justify-center" aria-label="Menü">
+                <svg id="menuIcon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path id="menuOpenIcon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    <path id="menuCloseIcon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" class="hidden" />
+                </svg>
+            </button>
+        </div>
+    </div>
+    <div id="mobileMenu" class="fixed inset-0 bg-black/60 z-40 md:hidden hidden" onclick="closeMobileMenu()"></div>
+    <nav id="mobileNav" class="fixed top-0 left-0 w-80 max-w-[85vw] h-full bg-ink z-50 shadow-xl overflow-y-auto md:hidden -translate-x-full transition-transform duration-300 border-r border-white/10" aria-label="Mobil menü">
+        <div class="p-4 border-b border-white/10 flex items-center justify-between">
+            <a href="/" class="flex items-center gap-2" onclick="closeMobileMenu()">
+                <img src="/images/logo-sezerai.png" alt="SEZER AI logosu" width="40" height="40" />
+                <span class="font-bold text-white">SEZER AI</span>
+            </a>
+            <button onclick="closeMobileMenu()" class="p-2 min-h-[44px] min-w-[44px] flex items-center justify-center text-white" aria-label="Menüyü kapat">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+        <div class="py-4">
+            <a href="/" class="block px-6 py-3.5 min-h-[44px] text-base font-medium text-white/80 hover:bg-white/5 hover:text-gold-light" onclick="closeMobileMenu()">Anasayfa</a>
+            <a href="/hakkimizda" class="block px-6 py-3.5 min-h-[44px] text-base font-medium text-white/80 hover:bg-white/5 hover:text-gold-light" onclick="closeMobileMenu()">Hakkımızda</a>
+            <div>
+                <span class="block px-6 py-3.5 min-h-[44px] text-base font-medium text-white/80">Projelerimiz</span>
+                @await Component.InvokeAsync("ProjeMenu", new { mobil = true })
+            </div>
+            <div>
+                <span class="block px-6 py-3.5 min-h-[44px] text-base font-medium text-white/80">Blog</span>
+                @await Component.InvokeAsync("BlogMenu", new { mobil = true })
+            </div>
+            <a href="/iletisim" class="block px-6 py-3.5 min-h-[44px] text-base font-medium text-white/80 hover:bg-white/5 hover:text-gold-light" onclick="closeMobileMenu()">İletişim</a>
+        </div>
+        <div class="p-4 border-t border-white/10">
+            <a href="/iletisim" class="pill-btn block w-full text-center px-5 py-3.5 min-h-[44px] bg-gold text-ink font-semibold" onclick="closeMobileMenu()">Bize Ulaşın</a>
+        </div>
+    </nav>
+</header>

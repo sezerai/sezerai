@@ -1,0 +1,108 @@
+@model ProjeDetayDto
+
+<section class="relative h-48 sm:h-80 overflow-hidden">
+    <img src="@Model.BannerGorseli" alt="@Model.Ad - SEZER AI Technology projesi" class="absolute inset-0 w-full h-full object-cover" width="1920" height="320" />
+    <div class="absolute inset-0 hero-overlay"></div>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-end pb-8">
+        <div>
+            <h1 class="text-3xl sm:text-4xl font-extrabold text-white">@Model.Ad</h1>
+            <p class="text-gold-light text-lg sm:text-xl font-semibold mt-1">@Model.KisaAciklama</p>
+        </div>
+    </div>
+</section>
+
+<nav aria-label="Breadcrumb" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 text-sm text-text-light">
+    <ol class="flex items-center flex-wrap gap-1">
+        <li><a href="/" class="hover:text-primary transition-colors">Anasayfa</a></li>
+        <li aria-hidden="true">/</li>
+        <li><a href="/projelerimiz" class="hover:text-primary transition-colors">Projelerimiz</a></li>
+        <li aria-hidden="true">/</li>
+        <li class="text-text-dark font-medium">@Model.Ad</li>
+    </ol>
+</nav>
+
+<section class="py-12 sm:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl scroll-reveal">
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-text-dark mb-2">Proje Hakkında</h2>
+            <div class="w-20 h-1 gold-gradient-bg rounded-full mb-6"></div>
+            <p class="text-text-light leading-relaxed text-base sm:text-lg">@Model.Aciklama</p>
+        </div>
+    </div>
+</section>
+
+<section class="py-12 sm:py-20 bg-surface-alt">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12 scroll-reveal">
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-text-dark mb-2">Özellikler</h2>
+            <div class="w-24 h-1 gold-gradient-bg mx-auto rounded-full"></div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            @foreach (var ozellik in Model.Ozellikler)
+            {
+                <div class="bg-white rounded-lg gold-border-card p-6 sm:p-8 scroll-reveal">
+                    <h3 class="text-lg font-bold text-text-dark mb-3">@ozellik.Baslik</h3>
+                    <p class="text-sm text-text-light leading-relaxed">@ozellik.Aciklama</p>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+
+<section class="py-12 sm:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl scroll-reveal">
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-text-dark mb-2">Kullanım Senaryoları</h2>
+            <div class="w-20 h-1 gold-gradient-bg rounded-full mb-6"></div>
+            <p class="text-text-light leading-relaxed text-base sm:text-lg">@Model.KullanimSenaryolari</p>
+        </div>
+    </div>
+</section>
+
+<section id="demo-talep" class="py-12 sm:py-20 bg-primary">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-10 scroll-reveal">
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-white mb-2">@Model.Ad İçin Demo Talep Edin</h2>
+            <div class="w-24 h-1 gold-gradient-bg mx-auto rounded-full mb-4"></div>
+            <p class="text-white/80">Formu doldurun, ekibimiz size en kısa sürede dönüş yapsın.</p>
+        </div>
+
+        @if (TempData["DemoBasarili"] is string basariMesaji)
+        {
+            <div class="bg-gold-light text-primary font-semibold rounded-lg p-4 mb-6 text-center">@basariMesaji</div>
+        }
+        @if (TempData["DemoHata"] is string hataMesaji)
+        {
+            <div class="bg-white text-red-700 font-semibold rounded-lg p-4 mb-6 text-center border border-red-300">@hataMesaji</div>
+        }
+
+        <form asp-controller="Projelerimiz" asp-action="DemoTalep" method="post" class="bg-white rounded-lg p-6 sm:p-8 gold-border-static space-y-4">
+            @Html.AntiForgeryToken()
+            <input type="hidden" name="donusSlug" value="@Model.Slug" />
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                    <label for="demoAdSoyad" class="block text-sm font-medium text-text-dark mb-1">Ad Soyad *</label>
+                    <input id="demoAdSoyad" name="AdSoyad" type="text" required class="w-full rounded-lg border border-border px-4 py-3 min-h-[44px] focus:outline-none focus:ring-2 focus:ring-gold" />
+                </div>
+                <div>
+                    <label for="demoEmail" class="block text-sm font-medium text-text-dark mb-1">E-posta *</label>
+                    <input id="demoEmail" name="Email" type="email" required class="w-full rounded-lg border border-border px-4 py-3 min-h-[44px] focus:outline-none focus:ring-2 focus:ring-gold" />
+                </div>
+                <div>
+                    <label for="demoTelefon" class="block text-sm font-medium text-text-dark mb-1">Telefon</label>
+                    <input id="demoTelefon" name="Telefon" type="tel" class="w-full rounded-lg border border-border px-4 py-3 min-h-[44px] focus:outline-none focus:ring-2 focus:ring-gold" />
+                </div>
+                <div>
+                    <label for="demoKurum" class="block text-sm font-medium text-text-dark mb-1">Kurum Adı</label>
+                    <input id="demoKurum" name="KurumAdi" type="text" class="w-full rounded-lg border border-border px-4 py-3 min-h-[44px] focus:outline-none focus:ring-2 focus:ring-gold" />
+                </div>
+            </div>
+            <div>
+                <label for="demoMesaj" class="block text-sm font-medium text-text-dark mb-1">Mesajınız</label>
+                <textarea id="demoMesaj" name="Mesaj" rows="4" class="w-full rounded-lg border border-border px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-gold"></textarea>
+            </div>
+                <button type="submit" class="w-full px-8 py-3.5 min-h-[44px] bg-primary text-white font-bold rounded-lg hover:bg-primary-light transition-colors">Demo Talep Et</button>
+        </form>
+    </div>
+</section>
+

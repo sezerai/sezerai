@@ -1,0 +1,45 @@
+@model SeoMeta
+@{
+    var siteAdi = "SEZER AI Technology";
+    var siteUrl = "https://www.sezerai.tr";
+    var tamUrl = siteUrl + Model.CanonicalYol;
+    var ogGorselTam = Model.OgGorsel.StartsWith("http") ? Model.OgGorsel : siteUrl + Model.OgGorsel;
+}
+<title>@Model.Baslik</title>
+<meta name="description" content="@Model.Aciklama" />
+<meta name="keywords" content="@Model.AnahtarKelimeler" />
+<meta name="robots" content="index, follow" />
+<meta name="author" content="@siteAdi" />
+<link rel="canonical" href="@tamUrl" />
+
+<meta property="og:site_name" content="@siteAdi" />
+<meta property="og:title" content="@Model.Baslik" />
+<meta property="og:description" content="@Model.Aciklama" />
+<meta property="og:image" content="@ogGorselTam" />
+<meta property="og:url" content="@tamUrl" />
+<meta property="og:type" content="@Model.OgTip" />
+<meta property="og:locale" content="tr_TR" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="@Model.Baslik" />
+<meta name="twitter:description" content="@Model.Aciklama" />
+<meta name="twitter:image" content="@ogGorselTam" />
+
+@if (Model.Breadcrumb.Any())
+{
+    var itemler = Model.Breadcrumb.Select((oge, index) =>
+    {
+        var pozisyon = index + 1;
+        var item = string.IsNullOrEmpty(oge.Yol)
+            ? $"{{\"@@type\":\"ListItem\",\"position\":{pozisyon},\"name\":\"{oge.Ad}\"}}"
+            : $"{{\"@@type\":\"ListItem\",\"position\":{pozisyon},\"name\":\"{oge.Ad}\",\"item\":\"{siteUrl}{oge.Yol}\"}}";
+        return item;
+    });
+    var breadcrumbJson = "{\"@@context\":\"https://schema.org\",\"@@type\":\"BreadcrumbList\",\"itemListElement\":[" + string.Join(",", itemler) + "]}";
+    <script type="application/ld+json">@Html.Raw(breadcrumbJson)</script>
+}
+
+@foreach (var jsonLd in Model.EkJsonLd)
+{
+    <script type="application/ld+json">@Html.Raw(jsonLd)</script>
+}

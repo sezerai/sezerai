@@ -1,0 +1,11 @@
+@model SezerAiWeb.Web.Models.ButtonModel
+@{
+    var sinif = Model.Varyant switch
+    {
+        "dolu-altin" => "pill-btn inline-flex items-center justify-center px-8 py-3.5 bg-gold text-ink font-bold hover:bg-gold-light hover:shadow-lg hover:shadow-gold/20 transition-colors text-sm sm:text-base",
+        "dis-hat-beyaz" => "pill-btn inline-flex items-center justify-center px-8 py-3.5 border-2 border-white text-white font-bold hover:bg-white hover:text-ink transition-colors text-sm sm:text-base",
+        "dis-hat-lacivert" => "pill-btn inline-flex items-center justify-center px-8 py-3.5 border-2 border-primary text-primary font-bold hover:bg-primary hover:text-white transition-colors text-sm sm:text-base",
+        _ => "pill-btn inline-flex items-center justify-center px-8 py-3.5 bg-primary text-white font-bold hover:bg-primary-light transition-colors text-sm sm:text-base",
+    };
+}
+<a href="@Model.Href" class="@sinif">@Model.Metin</a>
