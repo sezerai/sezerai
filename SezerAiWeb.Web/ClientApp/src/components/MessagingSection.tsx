@@ -5,14 +5,63 @@ export function MessagingSection() {
   const [phoneNumber, setPhoneNumber] = useState('');
   const [message, setMessage] = useState('');
   const [whatsapp, setWhatsapp] = useState(true);
-  const [telegram, setTelegram] = useState(true);
+  const [telegram, setTelegram] = useState(false);
+
+  // Phone number validation and formatting
+  const formatPhoneNumber = (phone: string): string => {
+    // Remove all non-numeric characters except +
+    let cleaned = phone.replace(/[^\d+]/g, '');
+
+    // If starts with 0, replace with +90
+    if (cleaned.startsWith('0')) {
+      cleaned = '+90' + cleaned.substring(1);
+    }
+
+    // If doesn't start with +, add +90
+    if (!cleaned.startsWith('+')) {
+      cleaned = '+90' + cleaned;
+    }
+
+    return cleaned;
+  };
 
   const handleSend = () => {
-    console.log('Sending message:', { phoneNumber, message, platforms: { whatsapp, telegram } });
-    // Mock send - in real app would call API
-    alert('Mesaj gönderildi! (Mock)');
-    setMessage('');
-    setPhoneNumber('');
+    // Validation
+    if (!phoneNumber.trim()) {
+      alert('⚠️ Lütfen telefon numarası girin!');
+      return;
+    }
+
+    if (!message.trim()) {
+      alert('⚠️ Lütfen mesaj yazın!');
+      return;
+    }
+
+    if (!whatsapp && !telegram) {
+      alert('⚠️ Lütfen en az bir platform seçin (WhatsApp veya Telegram)!');
+      return;
+    }
+
+    const formattedPhone = formatPhoneNumber(phoneNumber);
+    const encodedMessage = encodeURIComponent(message.trim());
+
+    // Open WhatsApp
+    if (whatsapp) {
+      const whatsappUrl = `https://wa.me/${formattedPhone.replace(/\+/g, '')}?text=${encodedMessage}`;
+      window.open(whatsappUrl, '_blank');
+    }
+
+    // Open Telegram
+    if (telegram) {
+      const telegramUrl = `https://t.me/${formattedPhone}?text=${encodedMessage}`;
+      window.open(telegramUrl, '_blank');
+    }
+
+    // Clear form after sending
+    setTimeout(() => {
+      setMessage('');
+      setPhoneNumber('');
+    }, 500);
   };
 
   return (
