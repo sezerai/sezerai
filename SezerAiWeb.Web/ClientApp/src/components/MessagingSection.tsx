@@ -4,7 +4,7 @@ import { messageTemplates } from '../lib/mockData';
 export function MessagingSection() {
   const [phoneNumber, setPhoneNumber] = useState('');
   const [message, setMessage] = useState('');
-  const [whatsapp, setWhatsapp] = useState(true);
+  const [whatsapp, setWhatsapp] = useState(false);
   const [telegram, setTelegram] = useState(false);
 
   // Phone number validation and formatting
@@ -28,17 +28,17 @@ export function MessagingSection() {
   const handleSend = () => {
     // Validation
     if (!phoneNumber.trim()) {
-      alert('⚠️ Lütfen telefon numarası girin!');
+      alert('⚡ Lütfen telefon numarası girin!');
       return;
     }
 
     if (!message.trim()) {
-      alert('⚠️ Lütfen mesaj yazın!');
+      alert('⚡ Lütfen mesaj yazın!');
       return;
     }
 
     if (!whatsapp && !telegram) {
-      alert('⚠️ Lütfen en az bir platform seçin (WhatsApp veya Telegram)!');
+      alert('⚡ Lütfen en az bir platform seçin (WhatsApp veya Telegram)!');
       return;
     }
 
@@ -65,20 +65,20 @@ export function MessagingSection() {
   };
 
   return (
-    <div className="flex-1 glass rounded-panel-radius p-6 mac-shadow">
-      <div className="flex items-center gap-2 mb-6">
+    <div className="flex-1 glass rounded-panel-radius p-4 sm:p-6 mac-shadow flex flex-col h-full max-h-[500px] sm:max-h-[600px]">
+      <div className="flex items-center gap-2 mb-2 sm:mb-3">
         <div className="w-2 h-2 rounded-full bg-primary animate-pulse"></div>
         <span className="font-title-sm text-title-sm text-on-surface">Toplu Mesaj Gönder</span>
       </div>
 
       {/* Phone Input */}
-      <div className="mb-4">
-        <label className="text-label-xs font-label-xs text-on-surface-variant mb-2 block">
+      <div className="mb-2">
+        <label className="text-label-xs font-label-xs text-on-surface-variant mb-1 block">
           Telefon Numarası
         </label>
         <input
           type="tel"
-          className="w-full glass-dark border-none rounded-full py-3 px-6 focus:ring-2 focus:ring-primary/20 text-body-md font-body-md"
+          className="w-full glass-dark border-none rounded-full py-2 px-4 sm:px-5 focus:ring-2 focus:ring-primary/20 text-body-sm sm:text-body-md font-body-sm sm:font-body-md"
           placeholder="+90 5XX XXX XX XX"
           maxLength={17}
           value={phoneNumber}
@@ -87,7 +87,7 @@ export function MessagingSection() {
       </div>
 
       {/* Platform Selection */}
-      <div className="mb-4 flex items-center gap-4">
+      <div className="mb-2 flex items-center gap-4">
         <label className="flex items-center gap-2 cursor-pointer">
           <input
             type="checkbox"
@@ -116,11 +116,12 @@ export function MessagingSection() {
       </div>
 
       {/* Message Icons */}
-      <div className="mb-3 flex flex-wrap gap-2">
+      <div className="mb-2 flex flex-wrap gap-1.5">
         {messageTemplates.map((template, idx) => (
           <button
             key={idx}
-            className="w-8 h-8 glass-dark rounded-lg flex items-center justify-center hover:bg-primary/20 transition-colors"
+            type="button"
+            className="w-7 h-7 sm:w-8 sm:h-8 glass-dark rounded-lg flex items-center justify-center hover:bg-primary/20 active:scale-95 transition-all text-sm"
             title={template.title}
             onClick={() => setMessage(message + ' ' + template.icon)}
           >
@@ -130,11 +131,10 @@ export function MessagingSection() {
       </div>
 
       {/* Message TextArea */}
-      <div className="relative mb-4">
+      <div className="relative mb-2 sm:mb-3 flex-1 min-h-0">
         <textarea
-          className="w-full glass-dark border-none rounded-2xl py-3 px-6 focus:ring-2 focus:ring-primary/20 text-body-md font-body-md resize-none custom-scroll"
+          className="w-full h-full glass-dark border-none rounded-2xl py-2 px-3 sm:px-4 focus:ring-2 focus:ring-primary/20 text-body-sm sm:text-body-md font-body-sm sm:font-body-md resize-none custom-scroll"
           placeholder="Mesajınızı yazın..."
-          rows={6}
           value={message}
           onChange={(e) => setMessage(e.target.value)}
         ></textarea>
@@ -142,7 +142,8 @@ export function MessagingSection() {
 
       {/* Send Button */}
       <button
-        className="w-full py-3 rounded-full font-title-sm text-title-sm transition-all shadow-lg hover:shadow-xl"
+        type="button"
+        className="w-full py-2 sm:py-2.5 rounded-full font-title-sm text-title-sm transition-all shadow-lg hover:shadow-xl active:scale-[0.98] min-h-[40px] sm:min-h-[44px]"
         style={{
           background: 'linear-gradient(135deg, #c0c0c0 0%, #e8e8e8 100%)',
           border: '2px solid #d4af37',
