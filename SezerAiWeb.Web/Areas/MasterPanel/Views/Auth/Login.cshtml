@@ -1,0 +1,256 @@
+@{
+    ViewData["Title"] = "Login | SEZER AI OS";
+    Layout = null;
+    var ipAddress = Context.Connection.RemoteIpAddress?.ToString() ?? "Unknown";
+}
+
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport" />
+    <title>@ViewData["Title"]</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#735c00",
+                        "primary-container": "#d4af37",
+                        "on-primary": "#ffffff",
+                        "secondary": "#003ec6",
+                        "surface": "#f7f9fc",
+                        "on-surface": "#191c1e",
+                        "on-surface-variant": "#4d4635",
+                        "outline": "#7f7663",
+                        "outline-variant": "#d0c5af",
+                        "error": "#ba1a1a"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Hanken Grotesk"],
+                        "title-sm": ["Hanken Grotesk"],
+                        "body-md": ["Hanken Grotesk"],
+                        "label-xs": ["Hanken Grotesk"]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            background: #f7f9fc;
+            font-family: 'Hanken Grotesk', sans-serif;
+        }
+
+        .mesh-gradient {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(at 0% 0%, rgba(212, 175, 55, 0.05) 0px, transparent 50%),
+                radial-gradient(at 100% 0%, rgba(255, 255, 255, 0.8) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(212, 175, 55, 0.03) 0px, transparent 50%),
+                radial-gradient(at 0% 100%, rgba(255, 255, 255, 0.8) 0px, transparent 50%);
+            z-index: -1;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(40px);
+            -webkit-backdrop-filter: blur(40px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.05);
+        }
+
+        .gold-gradient-btn {
+            background: linear-gradient(135deg, #d4af37 0%, #f1e095 50%, #e9c349 100%);
+            transition: all 0.3s ease;
+        }
+
+            .gold-gradient-btn:hover {
+                box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+                filter: brightness(1.05);
+            }
+
+        .input-glass {
+            background: rgba(255, 255, 255, 0.4);
+            border: 1px solid rgba(212, 175, 55, 0.1);
+            transition: all 0.2s ease;
+        }
+
+            .input-glass:focus {
+                background: rgba(255, 255, 255, 0.7);
+                border-color: rgba(212, 175, 55, 0.4);
+                box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.1);
+                outline: none;
+            }
+
+        .shimmer {
+            position: relative;
+            overflow: hidden;
+        }
+
+            .shimmer::after {
+                content: '';
+                position: absolute;
+                top: -50%;
+                left: -50%;
+                width: 200%;
+                height: 200%;
+                background: linear-gradient( to bottom right, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 40%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0) 60%, rgba(255,255,255,0) 100% );
+                transform: rotate(45deg);
+                animation: shimmer 6s infinite;
+            }
+
+        @@keyframes shimmer {
+            0% {
+                transform: translateX(-150%) rotate(45deg);
+            }
+
+            100% {
+                transform: translateX(150%) rotate(45deg);
+            }
+        }
+
+        .alert {
+            padding: 12px 16px;
+            border-radius: 8px;
+            margin-bottom: 16px;
+            font-size: 14px;
+        }
+
+        .alert-error {
+            background: rgba(186, 26, 26, 0.1);
+            border: 1px solid rgba(186, 26, 26, 0.3);
+            color: #ba1a1a;
+        }
+
+        .alert-success {
+            background: rgba(52, 168, 83, 0.1);
+            border: 1px solid rgba(52, 168, 83, 0.3);
+            color: #34a853;
+        }
+    </style>
+</head>
+<body>
+    <div class="mesh-gradient"></div>
+
+    <!-- TopNavBar -->
+    <header class="fixed top-0 left-0 w-full flex justify-between items-center px-8 md:px-16 py-4 backdrop-blur-md bg-white/10 z-50">
+        <div class="font-bold text-2xl text-[#735c00] flex items-center gap-2">
+            <span>SEZER AI OS</span>
+        </div>
+        <div class="flex items-center gap-6 text-[#191c1e]">
+            <div class="hidden md:flex items-center gap-4 text-sm opacity-60">
+                <span>@DateTime.Now.ToString("dd MMMM yyyy")</span>
+                <span>@DateTime.Now.ToString("HH:mm")</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Login Container -->
+    <main class="min-h-screen w-full flex flex-col items-center justify-center px-6 pt-20 pb-20">
+        <div class="glass-card w-full max-w-[480px] rounded-3xl p-10 md:p-12 relative overflow-hidden">
+            <!-- Top Branding -->
+            <div class="flex flex-col items-center mb-10">
+                <div class="w-32 h-32 mb-6 rounded-full overflow-hidden shadow-sm bg-white/40 border border-white/60 p-2 shimmer">
+                    <img alt="SEZER AI Logo" class="w-full h-full object-contain"
+                         src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcyRpxyaQi0c7ShvrB2HiLxekegizIwjwbADe4XBS4rQBsk-Bk6xrRWheLNNKkdDSnSCep9ABZiCrZo0ye7HiZKIluxR1np0fK9Qz9JRMBxFUnhk9Gwny1wz6XTqYq7lM7aQ4ApMHEGA5RjYFGbNRicvwEw4LH11ti_Oqv6uJS1VDWPWbf1ERCnrbpz3IzeB_80a_3iAnmPN-RwR7D13NSLY38TWROd37TuWwHZN55elCDVfK0KOl0bmBvtnQSgzPRNDUr3HzpgQ" />
+                </div>
+                <h1 class="text-3xl text-[#735c00] tracking-tight mb-1 font-semibold">SEZER AI OS</h1>
+                <p class="text-sm text-[#7f7663] tracking-[0.2em] uppercase opacity-60">Shaping the Future</p>
+            </div>
+
+            <!-- Error/Success Messages -->
+            @if (TempData["Error"] != null)
+            {
+                <div class="alert alert-error">
+                    @TempData["Error"]
+                </div>
+            }
+            @if (TempData["Success"] != null)
+            {
+                <div class="alert alert-success">
+                    @TempData["Success"]
+                </div>
+            }
+
+            <!-- IP Warning Box -->
+            <div class="mb-8 p-5 rounded-xl border border-error/20 bg-error-container/30">
+                <div class="flex items-center gap-2 mb-3">
+                    <span class="material-symbols-outlined text-error text-[22px]">lan</span>
+                    <span class="font-label-xs text-on-error-container uppercase tracking-widest font-semibold">Tracked Connection</span>
+                </div>
+                <p class="font-label-xs text-on-surface-variant ml-8 mb-1">Your IP Address:</p>
+                <p class="font-title-sm text-error ml-8 tracking-wider font-mono">@ipAddress</p>
+                <p class="font-label-xs text-outline mt-2 ml-8 opacity-70">⚠️ All access attempts are logged and monitored</p>
+            </div>
+
+            <!-- Secret Login Form -->
+            <div class="space-y-6">
+                <form asp-area="MasterPanel" asp-controller="Auth" asp-action="SecretLogin" method="post" class="space-y-4">
+                    @Html.AntiForgeryToken()
+
+                    <div class="space-y-2">
+                        <label class="font-label-xs text-on-surface-variant ml-1 uppercase tracking-widest">Master Access Code</label>
+                        <div class="relative">
+                            <span class="material-symbols-outlined absolute left-4 top-1/2 transform -translate-y-1/2 text-primary text-[20px]">vpn_key</span>
+                            <input name="SecretCode" type="password" required autofocus
+                                   class="input-glass w-full h-[52px] pl-12 pr-4 rounded-xl font-body-md text-on-surface placeholder:text-outline/50 font-mono"
+                                   placeholder="Enter secret access code" />
+                        </div>
+                    </div>
+
+                    <button type="submit"
+                            class="gold-gradient-btn w-full h-[56px] mt-4 rounded-xl font-title-sm text-on-primary flex items-center justify-center gap-2 shadow-lg active:scale-[0.98]">
+                        Authenticate
+                        <span class="material-symbols-outlined text-[18px]">lock_open</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="fixed bottom-0 w-full flex flex-col md:flex-row justify-between items-center px-8 md:px-16 py-6 text-xs text-[#4d4635]/60">
+        <div class="mb-4 md:mb-0">
+            © 2026 SEZER AI OS. All rights reserved.
+        </div>
+        <div class="flex gap-8">
+            <a href="#" class="hover:text-[#735c00] transition-colors duration-200">Privacy Policy</a>
+            <a href="#" class="hover:text-[#735c00] transition-colors duration-200">Terms of Service</a>
+            <a href="#" class="hover:text-[#735c00] transition-colors duration-200">Help Center</a>
+        </div>
+    </footer>
+
+    <script>
+        // Micro-interaction for input fields
+        const inputs = document.querySelectorAll('input');
+        inputs.forEach(input => {
+            input.addEventListener('focus', () => {
+                input.parentElement.previousElementSibling.classList.add('text-[#735c00]');
+                input.parentElement.previousElementSibling.classList.remove('text-[#4d4635]');
+            });
+            input.addEventListener('blur', () => {
+                input.parentElement.previousElementSibling.classList.remove('text-[#735c00]');
+                input.parentElement.previousElementSibling.classList.add('text-[#4d4635]');
+            });
+        });
+
+        // Simple parallax effect on the mesh background
+        document.addEventListener('mousemove', (e) => {
+            const moveX = (e.clientX - window.innerWidth / 2) * 0.01;
+            const moveY = (e.clientY - window.innerHeight / 2) * 0.01;
+            document.querySelector('.mesh-gradient').style.transform = `translate(${moveX}px, ${moveY}px)`;
+        });
+    </script>
+</body>
+</html>

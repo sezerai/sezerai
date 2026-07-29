@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html class="light" lang="tr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
+<title>@ViewData["Title"]</title>
+<!-- Google Fonts: Hanken Grotesk -->
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-tint": "#735c00",
+                      "surface-container-high": "#e6e8eb",
+                      "on-secondary-fixed": "#001452",
+                      "surface": "#f7f9fc",
+                      "primary": "#735c00",
+                      "on-tertiary-fixed": "#00174b",
+                      "secondary-fixed-dim": "#b7c4ff",
+                      "surface-container-lowest": "#ffffff",
+                      "surface-variant": "#e0e3e6",
+                      "on-primary-fixed-variant": "#574500",
+                      "on-tertiary-fixed-variant": "#27438a",
+                      "primary-fixed": "#ffe088",
+                      "surface-bright": "#f7f9fc",
+                      "tertiary-fixed": "#dbe1ff",
+                      "on-secondary": "#ffffff",
+                      "background": "#f7f9fc",
+                      "error-container": "#ffdad6",
+                      "secondary": "#003ec6",
+                      "on-error-container": "#93000a",
+                      "outline": "#7f7663",
+                      "on-surface": "#191c1e",
+                      "secondary-container": "#0052fe",
+                      "inverse-primary": "#e9c349",
+                      "inverse-on-surface": "#eff1f4",
+                      "on-secondary-container": "#dfe3ff",
+                      "error": "#ba1a1a",
+                      "tertiary-container": "#97b0ff",
+                      "inverse-surface": "#2d3133",
+                      "surface-container-highest": "#e0e3e6",
+                      "on-background": "#191c1e",
+                      "on-surface-variant": "#4d4635",
+                      "outline-variant": "#d0c5af",
+                      "secondary-fixed": "#dde1ff",
+                      "on-secondary-fixed-variant": "#0038b6",
+                      "on-primary-fixed": "#241a00",
+                      "surface-dim": "#d8dadd",
+                      "surface-container": "#eceef1",
+                      "on-tertiary-container": "#254188",
+                      "primary-fixed-dim": "#e9c349",
+                      "on-tertiary": "#ffffff",
+                      "on-primary-container": "#554300",
+                      "tertiary": "#415ba4",
+                      "surface-container-low": "#f2f4f7",
+                      "on-error": "#ffffff",
+                      "tertiary-fixed-dim": "#b4c5ff",
+                      "primary-container": "#d4af37",
+                      "on-primary": "#ffffff"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px",
+                      "panel-radius": "24px"
+              },
+              "spacing": {
+                      "base": "8px",
+                      "panel-radius": "24px",
+                      "container-padding": "24px",
+                      "widget-gap": "20px",
+                      "sidebar-width": "80px"
+              },
+              "fontFamily": {
+                      "display-lg": ["Hanken Grotesk"],
+                      "headline-md": ["Hanken Grotesk"],
+                      "title-sm": ["Hanken Grotesk"],
+                      "label-xs": ["Hanken Grotesk"],
+                      "body-md": ["Hanken Grotesk"]
+              },
+              "fontSize": {
+                      "display-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                      "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                      "title-sm": ["16px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                      "label-xs": ["11px", {"lineHeight": "1.2", "fontWeight": "500"}],
+                      "body-md": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Hanken Grotesk', sans-serif;
+            background: radial-gradient(circle at 50% 50%, #f7f9fc 0%, #eceef1 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+        .glass {
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(40px);
+            -webkit-backdrop-filter: blur(40px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .glass-dark {
+            background: rgba(0, 0, 0, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .glow-effect:hover {
+            box-shadow: 0 0 20px rgba(115, 92, 0, 0.2);
+        }
+        .mac-shadow {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05), inset 0 1px 1px rgba(255,255,255,0.8);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Custom scrollbar for glass widgets */
+        .custom-scroll::-webkit-scrollbar { width: 4px; }
+        .custom-scroll::-webkit-scrollbar-track { background: transparent; }
+        .custom-scroll::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.1); border-radius: 10px; }
+
+        @@keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .animate-float { animation: float 6s ease-in-out infinite; }
+    </style>
+</head>
+<body class="text-on-surface">
+<!-- Top App Bar -->
+<header class="fixed top-0 left-0 w-full h-12 flex items-center px-4 md:px-6 z-50 bg-white/20 dark:bg-black/20 backdrop-blur-xl border-b border-white/10 shadow-sm flex justify-between items-center" style="padding-top: env(safe-area-inset-top)">
+<div class="flex items-center gap-3 md:gap-6">
+<!-- Hamburger Menu Button - Mobile Only -->
+<button id="mobileMenuBtn" class="md:hidden w-8 h-8 flex items-center justify-center text-on-surface hover:bg-white/10 rounded transition-colors" onclick="toggleMobileMenu()">
+<span class="material-symbols-outlined text-xl">menu</span>
+</button>
+<span class="font-display-lg text-base md:text-headline-md font-bold tracking-tight text-on-surface">SEZER AI</span>
+<nav class="hidden md:flex gap-4">
+<a class="text-body-md font-body-md text-on-surface-variant hover:bg-white/10 px-2 py-1 rounded transition-colors" href="#">Dosya</a>
+<a class="text-body-md font-body-md text-on-surface-variant hover:bg-white/10 px-2 py-1 rounded transition-colors" href="#">Düzen</a>
+<a class="text-body-md font-body-md text-on-surface-variant hover:bg-white/10 px-2 py-1 rounded transition-colors" href="#">Görünüm</a>
+<a class="text-body-md font-body-md text-on-surface-variant hover:bg-white/10 px-2 py-1 rounded transition-colors" href="#">Pencere</a>
+<a class="text-body-md font-body-md text-on-surface-variant hover:bg-white/10 px-2 py-1 rounded transition-colors" href="#">Yardım</a>
+</nav>
+</div>
+<div class="flex items-center gap-2 md:gap-4">
+<div class="hidden md:flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-title-sm">wifi</span>
+<span class="material-symbols-outlined text-title-sm">battery_full</span>
+<span class="material-symbols-outlined text-title-sm">notifications</span>
+</div>
+<div class="hidden md:flex items-center gap-2 ml-2">
+<span class="text-label-xs font-label-xs font-medium">25 Temmuz 2026 Cumartesi 14:42</span>
+</div>
+<button class="md:hidden w-8 h-8 flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-xl">notifications</span>
+</button>
+</div>
+</header>
+
+<!-- Mobile Sidebar Menu Overlay -->
+<div id="mobileSidebar" class="md:hidden fixed inset-0 z-40 transform -translate-x-full transition-transform duration-300 ease-in-out">
+<div class="absolute inset-0 bg-black/50 backdrop-blur-sm" onclick="toggleMobileMenu()"></div>
+<aside class="absolute left-0 top-0 bottom-0 w-64 bg-white/95 backdrop-blur-2xl shadow-2xl flex flex-col py-6 px-4">
+<div class="flex items-center justify-between mb-8">
+<span class="font-display-lg text-headline-md font-bold text-on-surface">SEZER AI</span>
+<button onclick="toggleMobileMenu()" class="w-8 h-8 flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<nav class="flex flex-col gap-2">
+<a class="flex items-center gap-3 px-4 py-3 text-body-md font-body-md text-on-surface bg-primary/10 rounded-xl" href="#">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">home</span>
+<span>Ana Sayfa</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-body-md font-body-md text-on-surface-variant hover:bg-white/50 rounded-xl transition-colors" href="#">
+<span class="material-symbols-outlined">smart_toy</span>
+<span>AI Asistan</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-body-md font-body-md text-on-surface-variant hover:bg-white/50 rounded-xl transition-colors" href="#">
+<span class="material-symbols-outlined">folder</span>
+<span>Projeler</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-body-md font-body-md text-on-surface-variant hover:bg-white/50 rounded-xl transition-colors" href="#">
+<span class="material-symbols-outlined">bar_chart</span>
+<span>Analytics</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-body-md font-body-md text-on-surface-variant hover:bg-white/50 rounded-xl transition-colors" href="#">
+<span class="material-symbols-outlined">verified_user</span>
+<span>Güvenlik</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-body-md font-body-md text-on-surface-variant hover:bg-white/50 rounded-xl transition-colors" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span>Ayarlar</span>
+</a>
+</nav>
+</aside>
+</div>
+<!-- Side Navigation Bar -->
+<aside class="hidden md:fixed md:left-4 md:top-20 md:bottom-24 md:flex md:flex-col items-center py-6 gap-widget-gap z-40 bg-white/40 backdrop-blur-3xl border-r border-white/20 shadow-2xl rounded-r-panel-radius w-20">
+<div class="flex flex-col items-center gap-8 w-full">
+<button class="w-12 h-12 flex items-center justify-center bg-primary/20 shadow-[0_0_15px_rgba(115,92,0,0.3)] rounded-xl scale-110 group transition-all">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;">home</span>
+<span class="absolute left-full ml-4 px-2 py-1 bg-surface-container-highest rounded text-[10px] opacity-0 group-hover:opacity-100 transition-opacity">Ana Sayfa</span>
+</button>
+<button class="w-12 h-12 flex items-center justify-center text-on-surface-variant opacity-60 hover:scale-105 hover:bg-white/10 rounded-xl transition-all group">
+<span class="material-symbols-outlined">smart_toy</span>
+<span class="absolute left-full ml-4 px-2 py-1 bg-surface-container-highest rounded text-[10px] opacity-0 group-hover:opacity-100 transition-opacity">AI Asistan</span>
+</button>
+<button class="w-12 h-12 flex items-center justify-center text-on-surface-variant opacity-60 hover:scale-105 hover:bg-white/10 rounded-xl transition-all group">
+<span class="material-symbols-outlined">folder</span>
+<span class="absolute left-full ml-4 px-2 py-1 bg-surface-container-highest rounded text-[10px] opacity-0 group-hover:opacity-100 transition-opacity">Projeler</span>
+</button>
+<button class="w-12 h-12 flex items-center justify-center text-on-surface-variant opacity-60 hover:scale-105 hover:bg-white/10 rounded-xl transition-all group">
+<span class="material-symbols-outlined">bar_chart</span>
+<span class="absolute left-full ml-4 px-2 py-1 bg-surface-container-highest rounded text-[10px] opacity-0 group-hover:opacity-100 transition-opacity">Analytics</span>
+</button>
+<button class="w-12 h-12 flex items-center justify-center text-on-surface-variant opacity-60 hover:scale-105 hover:bg-white/10 rounded-xl transition-all group">
+<span class="material-symbols-outlined">verified_user</span>
+<span class="absolute left-full ml-4 px-2 py-1 bg-surface-container-highest rounded text-[10px] opacity-0 group-hover:opacity-100 transition-opacity">Güvenlik</span>
+</button>
+<button class="w-12 h-12 flex items-center justify-center text-on-surface-variant opacity-60 hover:scale-105 hover:bg-white/10 rounded-xl transition-all group">
+<span class="material-symbols-outlined">settings</span>
+<span class="absolute left-full ml-4 px-2 py-1 bg-surface-container-highest rounded text-[10px] opacity-0 group-hover:opacity-100 transition-opacity">Ayarlar</span>
+</button>
+</div>
+<div class="mt-auto">
+<button class="w-10 h-10 flex items-center justify-center text-on-surface-variant opacity-40 hover:opacity-100">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+</div>
+</aside>
+<!-- Main Workspace -->
+<main class="px-4 md:ml-28 md:mr-4 pt-16 pb-24 md:pb-32 min-h-screen grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6 overflow-y-auto overflow-x-hidden">
+@RenderBody()
+</main>
+<!-- MacOS Style Bottom Dock -->
+<footer class="fixed bottom-4 md:bottom-4 left-1/2 -translate-x-1/2 z-50 flex items-center px-2 md:px-4 py-2 md:py-3 glass rounded-xl md:rounded-panel-radius mac-shadow gap-2 md:gap-3 max-w-[95vw] overflow-x-auto" style="padding-bottom: max(0.5rem, env(safe-area-inset-bottom))">
+<div class="flex items-center gap-2 md:gap-4 border-r border-black/10 pr-2 md:pr-4">
+<button class="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-white shadow-sm hover:scale-110 transition-transform active:scale-95 flex items-center justify-center overflow-hidden">
+<img alt="Finder" class="w-8 h-8 md:w-10 md:h-10 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAF8ds3jxylm5WqWfx8l6xUzr3E9lQ4mEQvqQDW5FZH-r1SzoeTbMmi24g165Aqt7GpDNYDEO_h17jbUkN2CUIeEZYXhSKtQaAYDaKFmLhrXi-YEqLOrH-icIAXDcDCVqS5Jy6vYrLbGKuvWIaYcrkvrglS1Gx-hdBd4GD00flA9fYKIBpooJ8UFvVONttLKGI-tlW6enJAIpDJhJoUQL_M4Hz89EphRTfRoRWTyosbvLOVWxtUNeZn61wsBhmfjB4X3H5-ePPFuA"/>
+</button>
+<button class="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-white shadow-sm hover:scale-110 transition-transform active:scale-95 flex items-center justify-center flex-col p-1">
+<span class="text-[7px] md:text-[8px] font-bold text-red-500 uppercase">Tem</span>
+<span class="text-base md:text-lg font-extrabold leading-none">25</span>
+</button>
+<button class="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-white shadow-sm hover:scale-110 transition-transform active:scale-95 flex items-center justify-center">
+<img alt="Notes" class="w-8 h-8 md:w-10 md:h-10 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuN4s8Jm0VHcSVmqx2fzrFk-HprY-74acJvVMYlSM5CBr8r6io_3wC7C9i1z5x2hA_mIDa57W_pR5rea_t-9AoY8-SfFqW05pfPG1QVkvxBi2VlJOQKSX2Se26XNW8m74IP_FY9rCon3u8abkFIbyA5Nha8XaRWr_lhOdfmV2BDeplRWV45TlRFXCubp8jwHaDtQPWVE325sxSE4OVM_2xcUKD2ehbeZQihJL52WJhP1IAK6_tObh2XpqI4C4TwbxjD3WIXxQ52w"/>
+</button>
+<button class="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-black shadow-sm hover:scale-110 transition-transform active:scale-95 flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-xl md:text-2xl">terminal</span>
+</button>
+<button class="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-white shadow-sm hover:scale-110 transition-transform active:scale-95 flex items-center justify-center">
+<img alt="Photos" class="w-8 h-8 md:w-10 md:h-10 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgPTRTYKHgT9zyRoj1NaMU3lSrf3DVtPOEdC_ywqKvziyAVd_qe3OGXPMYwfXIF9XedCwVCGiQPBRaqEY9dGRVFWS84XJ7eSbVacPGRhKnzro2h3E_UfVrX75exlqvgyxM7bTEoucSITpueGIMIhT1nZqEtTwZDt8HKxtDJgpbXl-QaG8tnpyk1N6xdQm4OuHd__lcYNCKwTnbxHTJgBf-WJpa_AuNwlGDiZzvgk1XjLVd-MYvn3X8Wo6NWAityZQK0PgZWRndIQ"/>
+</button>
+<button class="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-white shadow-sm hover:scale-110 transition-transform active:scale-95 flex items-center justify-center">
+<img alt="Settings" class="w-8 h-8 md:w-10 md:h-10 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAO5oLUcOZRDDHQxDHXiFvHT6w3GtrtWUPy5booBbc_YPYOoYAeC4f8JyuoKk7rZMe0cSYcpSaooKivVsLG8yzQi2OqJqfA4sQivjh1l4RDyn6BXNgZYFp8Oxb6uFT0ZLiz0xB4oB8iJVIy-_Mx7yKvuo8AZfKWcT1IDJ_hRj-OKYfiSP8clkyGm7CTPWkIaLAH2MrwW_CghwKjDnDA6TVDfS-Pkv4GyoV2QLpxhB5_MJe5qxO5Mqvqj9DaFlryYx308XZTxUmOg"/>
+</button>
+</div>
+<div class="flex items-center gap-2 md:gap-4 pl-1">
+<button class="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-white shadow-sm hover:scale-110 transition-transform active:scale-95 flex items-center justify-center">
+<img alt="Folder" class="w-8 h-8 md:w-10 md:h-10 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBo7Eddk6ThoFuNdX41-NqnOlRNpnGUrG2UZUYiSR7fEuf2NXDKSFw9siu8MK8ezd-9W8COrv30ErBiOgUIm8qqjTZhuBbywNXuLcD8EqdFWL1A85MNxDuyvIttV9vlh3kDS0vffyxGfQXM0yaMf2LCPhkwXxEvOl8xGxsJMJHIXGIXKujcAQmWumx4685L8CdHxZInBWUB27wJ3ZYkg6-MG_JssxgqrMtA2nPTJDoUHNPg3ob2NHraJCA-o9S-dZo2gGTwb-uanQ"/>
+</button>
+<button class="w-10 h-10 md:w-12 md:h-12 rounded-xl hover:scale-110 transition-transform active:scale-95 flex items-center justify-center opacity-60">
+<span class="material-symbols-outlined text-on-surface-variant text-3xl md:text-4xl">delete</span>
+</button>
+</div>
+</footer>
+<!-- Background Decoration -->
+<div class="fixed inset-0 pointer-events-none -z-10">
+<div class="absolute top-1/4 -right-20 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[100px]"></div>
+<div class="absolute -bottom-20 -left-20 w-[600px] h-[600px] bg-secondary/5 rounded-full blur-[100px]"></div>
+</div>
+<script>
+        // Mobile Menu Toggle
+        function toggleMobileMenu() {
+            const mobileSidebar = document.getElementById('mobileSidebar');
+            mobileSidebar.classList.toggle('-translate-x-full');
+        }
+
+        // Dummy Google Login Logic
+        function handleGoogleLogin() {
+            console.log("Initiating Google OAuth flow...");
+            const btn = event.currentTarget;
+            btn.innerHTML = `
+                <div class="animate-spin rounded-full h-4 w-4 border-2 border-primary border-t-transparent"></div>
+                <span class="text-label-xs font-label-xs font-semibold text-on-surface">Giriş Yapılıyor...</span>
+            `;
+
+            setTimeout(() => {
+                alert("Simüle edilmiş Google Girişi Başarılı!");
+                btn.innerHTML = `
+                    <svg width="18" height="18" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+                    <span class="text-label-xs font-label-xs font-semibold text-on-surface">Oturum Açıldı</span>
+                `;
+            }, 1500);
+        }
+
+        // Atmospheric micro-interaction: Subtle hover glow for main panels
+        document.querySelectorAll('.glass').forEach(panel => {
+            panel.addEventListener('mousemove', (e) => {
+                const rect = panel.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                panel.style.setProperty('--mouse-x', `${x}px`);
+                panel.style.setProperty('--mouse-y', `${y}px`);
+            });
+        });
+    </script>
+</body>
+</html>
