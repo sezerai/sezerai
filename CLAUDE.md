@@ -1,0 +1,1 @@
+- kesin talimattır. Benim söylediğim dışında hiç bir işlem yapamazsın

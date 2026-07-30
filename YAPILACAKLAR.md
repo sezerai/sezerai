@@ -1057,3 +1057,8 @@
 - ✅ **nul dosyası silindi** - Gereksiz dosya kaldırıldı
 - ✅ **Git yapılandırması tamamlandı** - Remote repo eklendi, push başarılı
 - ✅ **Build başarılı** - React (646.58 kB) + .NET (0 Warning, 0 Error)
+- ✅ **500 Server Error Çözüldü** - Runtime version uyuşmazlığı düzeltildi (30 Tem 2026 20:35)
+  - Sorun: .NET runtime config 9.0.0 istiyordu, sistemde 9.0.17/9.0.18 vardı
+  - Çözüm: Full clean publish + runtime config manuel düzeltme (9.0.0 → 9.0.18)
+  - Dosya: C:\inetpub\wwwroot\sezerai\SezerAiWeb.Web.runtimeconfig.json
+  - Test: ✅ https://sezerai.tr/ ve https://sezerai.tr/panel çalışıyor

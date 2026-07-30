@@ -260,8 +260,16 @@ dotnet test
 
 ---
 
-**Son Güncelleme:** 29 Temmuz 2026
-**Versiyon:** 1.0.0-responsive
-**Build:** ✅ Başarılı (0 Uyarı, 0 Hata)
+**Son Güncelleme:** 30 Temmuz 2026
+**Versiyon:** 1.0.1-production-fix
+**Build:** ✅ Başarılı (React: 646.58 kB, .NET: 0 Uyarı, 0 Hata)
 **Deploy:** ✅ IIS (C:\inetpub\wwwroot\sezerai)
 **Mobil Uyumluluk:** ✅ %100 (iOS + Android)
+**Production Status:** ✅ Live (https://sezerai.tr + https://sezerai.tr/panel)
+
+### Son Değişiklikler (30 Temmuz 2026)
+- ✅ **500 Server Error Çözüldü** - .NET runtime version uyuşmazlığı düzeltildi
+  - Sorun: Runtime config 9.0.0 istiyordu, sistemde 9.0.17/9.0.18 vardı
+  - Çözüm: Full clean publish + runtime config güncellemesi (9.0.0 → 9.0.18)
+  - Etkilenen dosya: `SezerAiWeb.Web.runtimeconfig.json`
+  - Test: Her iki site başarıyla çalışıyor
