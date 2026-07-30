@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" role="img" aria-labelledby="afTitle">
+  <title id="afTitle">AI Freeluncher</title>
+  <defs>
+    <linearGradient id="afBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#002855" />
+      <stop offset="100%" stop-color="#1a4a8a" />
+    </linearGradient>
+    <linearGradient id="afGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#9a7512" />
+      <stop offset="50%" stop-color="#d4af37" />
+      <stop offset="100%" stop-color="#f2ca50" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="480" fill="url(#afBg)" />
+  <circle cx="90" cy="60" r="130" fill="#ffffff" opacity="0.04" />
+  <circle cx="720" cy="410" r="190" fill="#ffffff" opacity="0.04" />
+
+  <!-- Tabak -->
+  <g transform="translate(400,240)">
+    <ellipse cx="0" cy="70" rx="150" ry="26" fill="#000000" opacity="0.12" />
+    <circle cx="0" cy="0" r="120" fill="#ffffff" opacity="0.95" />
+    <circle cx="0" cy="0" r="92" fill="none" stroke="#1a4a8a" stroke-width="4" opacity="0.35" />
+
+    <!-- Yaprak / surdurulebilirlik motifi -->
+    <g transform="translate(0,-4)">
+      <path d="M0,-55 C40,-55 62,-22 55,15 C40,10 8,-2 0,-55 Z" fill="url(#afGold)" />
+      <path d="M0,-55 C-40,-55 -62,-22 -55,15 C-40,10 -8,-2 0,-55 Z" fill="#1a4a8a" opacity="0.85" />
+      <line x1="0" y1="-55" x2="0" y2="40" stroke="url(#afGold)" stroke-width="6" stroke-linecap="round" />
+    </g>
+  </g>
+
+  <text x="400" y="440" text-anchor="middle" font-family="Montserrat, Arial, sans-serif" font-size="30" font-weight="800" fill="#ffffff">AI Freeluncher</text>
+</svg>

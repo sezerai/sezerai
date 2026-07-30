@@ -15,18 +15,18 @@ export function PlatformCard({ platform, onClick }: PlatformCardProps) {
     <div
       className={cn(
         "glass p-3 sm:p-4 rounded-panel-radius hover:scale-[1.02] active:scale-[0.98]",
-        "transition-transform cursor-pointer group flex items-center gap-3 sm:gap-4 min-h-[72px]"
+        "transition-transform cursor-pointer group flex items-center gap-3 sm:gap-4 min-h-[68px] sm:min-h-[72px] touch-manipulation"
       )}
       onClick={onClick}
     >
-      <div className="w-12 h-12 sm:w-16 sm:h-16 bg-white rounded-xl sm:rounded-2xl flex items-center justify-center shadow-sm border border-white/40 overflow-hidden flex-shrink-0"
+      <div className="w-14 h-14 sm:w-16 sm:h-16 min-w-[56px] sm:min-w-[64px] bg-white rounded-xl sm:rounded-2xl flex items-center justify-center shadow-sm border border-white/40 overflow-hidden flex-shrink-0"
            style={platform.iconBg ? { backgroundColor: platform.iconBg } : undefined}>
         {platform.iconUrl ? (
           <img
             alt={platform.name}
             className={cn(
               "w-full h-full",
-              platform.slug === 'ai-hospital' || platform.slug === 'geliyoo' ? 'object-contain p-1 sm:p-2' : 'object-cover'
+              platform.slug === 'ai-hospital' || platform.slug === 'geliyoo' ? 'object-contain p-1.5 sm:p-2' : 'object-cover'
             )}
             src={platform.iconUrl}
           />
@@ -39,10 +39,10 @@ export function PlatformCard({ platform, onClick }: PlatformCardProps) {
       </div>
       <div className="flex-1 min-w-0">
         <div className="flex items-center gap-2">
-          <span className="font-title-sm text-title-sm text-on-surface truncate">{platform.name}</span>
-          <span className={cn("w-2 h-2 rounded-full flex-shrink-0", statusColor)}></span>
+          <span className="font-title-sm sm:font-title-md text-title-sm sm:text-title-md text-on-surface truncate select-none">{platform.name}</span>
+          <span className={cn("w-2 h-2 min-w-[8px] rounded-full flex-shrink-0", statusColor)}></span>
         </div>
-        <p className="font-label-xs text-label-xs text-on-surface-variant truncate">{platform.description}</p>
+        <p className="font-label-xs sm:font-label-sm text-label-xs sm:text-label-sm text-on-surface-variant truncate select-none">{platform.description}</p>
       </div>
     </div>
   );

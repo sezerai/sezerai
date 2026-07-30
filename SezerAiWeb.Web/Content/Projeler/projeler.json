@@ -1,0 +1,78 @@
+[
+  {
+    "ad": "Robot Hemşire",
+    "slug": "robot-hemsire",
+    "siraNo": 1,
+    "kisaAciklama": "Yapay zeka destekli robot hemşire sistemi ile hasta bakımında yeni bir dönem.",
+    "aciklama": "Robot Hemşire, sağlık sektöründe hasta bakımını yapay zeka destekli robot teknolojisi ile dönüştüren inovatif bir projedir. Hasta takibi, ilaç hatırlatma, vital bulgu ölçümü ve acil durum yönetimi gibi kritik süreçleri otonom olarak yönetebilen akıllı bir sisteme sahiptir. 7/24 kesintisiz gözetim ile hemşirelik ekiplerinin iş yükünü azaltırken hasta güvenliğini artırır.",
+    "kullanimSenaryolari": "Hastane servislerinde rutin vital bulgu takibi; yoğun bakım öncesi/sonrası hasta gözetimi; huzurevlerinde yaşlı bakımı desteği; evde bakım hizmetlerinde uzaktan izleme; acil durum tespiti ve otomatik ekip bilgilendirmesi.",
+    "kapakGorseli": "/images/projects/robot-hemsire-kart.svg",
+    "bannerGorseli": "/images/projects/robot-hemsire-kart.svg",
+    "metaBaslik": "Robot Hemşire - Yapay Zeka Destekli Hasta Bakım Sistemi | SEZER AI Technology",
+    "metaAciklama": "Robot Hemşire, yapay zeka destekli robot teknolojisiyle hasta takibi, ilaç hatırlatma ve acil durum yönetimini otonom şekilde sağlar.",
+    "metaAnahtarKelimeler": "robot hemşire, yapay zeka hasta bakımı, sağlık robotu, hasta takip sistemi",
+    "ozellikler": [
+      { "baslik": "Otonom Hasta Takibi", "aciklama": "Yapay zeka destekli sensörlerle hastaların 7/24 takibi ve anlık veri analizi." },
+      { "baslik": "Vital Bulgu Ölçümü", "aciklama": "Nabız, tansiyon, ateş ve oksijen satürasyonunun temassız/yarı temaslı ölçümü." },
+      { "baslik": "İlaç Hatırlatma", "aciklama": "Kişiselleştirilmiş ilaç programına göre sesli ve görsel hatırlatmalar." },
+      { "baslik": "Acil Durum Yönetimi", "aciklama": "Anormal değer tespitinde anlık uyarı ve ilgili sağlık ekibine otomatik bildirim." }
+    ]
+  },
+  {
+    "ad": "AI Hospital",
+    "slug": "ai-hospital",
+    "siraNo": 2,
+    "kisaAciklama": "Yapay zeka destekli hastane ve klinik yönetim sistemi.",
+    "aciklama": "AI Hospital, hastane ve kliniklerin uçtan uca dijital yönetimini sağlayan kapsamlı bir sağlık bilgi sistemidir. Randevu yönetiminden elektronik hasta kaydına, doktor-hasta iletişiminden laboratuvar ve görüntüleme entegrasyonuna kadar tüm süreçleri tek bir platformda birleştirir; yapay zeka destekli klinik karar destek modülleriyle tanı ve tedavi süreçlerini hızlandırır.",
+    "kullanimSenaryolari": "Özel hastane ve poliklinik yönetimi; çoklu şube/branş randevu organizasyonu; doktor performans ve doluluk analitiği; laboratuvar-görüntüleme sonuçlarının tek ekrandan takibi; hasta memnuniyeti ve geri bildirim yönetimi.",
+    "kapakGorseli": "/images/projects/ai-hospital-kart.svg",
+    "bannerGorseli": "/images/projects/ai-hospital-kart.svg",
+    "metaBaslik": "AI Hospital - Yapay Zeka Destekli Hastane Yönetim Sistemi | SEZER AI Technology",
+    "metaAciklama": "AI Hospital, randevu, elektronik hasta kaydı ve klinik karar destek modülleriyle hastane ve klinikleri uçtan uca dijitalleştirir.",
+    "metaAnahtarKelimeler": "AI Hospital, hastane yönetim sistemi, elektronik hasta kaydı, klinik karar destek",
+    "ozellikler": [
+      { "baslik": "Elektronik Hasta Kaydı", "aciklama": "Hasta geçmişi, tetkik ve reçetelerin tek merkezden güvenli yönetimi." },
+      { "baslik": "Akıllı Randevu Sistemi", "aciklama": "Branş ve doktor bazlı otomatik uygunluk hesaplama ve çakışma önleme." },
+      { "baslik": "Klinik Karar Destek", "aciklama": "Yapay zeka destekli tanı önerileri ve ilaç etkileşim uyarıları." },
+      { "baslik": "Laboratuvar Entegrasyonu", "aciklama": "Tahlil ve görüntüleme sonuçlarının otomatik eşleştirilmesi ve raporlanması." }
+    ]
+  },
+  {
+    "ad": "AI Freeluncher",
+    "slug": "ai-freeluncher",
+    "siraNo": 3,
+    "kisaAciklama": "Yapay zeka destekli gıda ve hizmet platformu.",
+    "aciklama": "AI Freeluncher, gıda israfını azaltmayı ve toplumsal dayanışmayı teknolojiyle buluşturan yapay zeka destekli bir gıda ve hizmet platformudur. İşletmelerin gün sonu ürün fazlalarını uygun fiyatla veya bağış olarak ihtiyaç sahipleriyle buluşturan akıllı eşleştirme algoritmasıyla hem sürdürülebilirliğe hem de sosyal fayda üretimine katkı sağlar.",
+    "kullanimSenaryolari": "Restoran ve marketlerde gün sonu ürün fazlası yönetimi; STK ve belediyelerin ihtiyaç sahibi eşleştirme operasyonları; kurumsal sosyal sorumluluk gıda bağışı programları; bireysel kullanıcılar için uygun fiyatlı gıda erişimi.",
+    "kapakGorseli": "/images/projects/ai-freeluncher-kart.svg",
+    "bannerGorseli": "/images/projects/ai-freeluncher-kart.svg",
+    "metaBaslik": "AI Freeluncher - Yapay Zeka Destekli Gıda ve Hizmet Platformu | SEZER AI Technology",
+    "metaAciklama": "AI Freeluncher, akıllı eşleştirme algoritmasıyla gıda israfını azaltıp ihtiyaç sahiplerine erişimi kolaylaştıran yapay zeka destekli platformdur.",
+    "metaAnahtarKelimeler": "AI Freeluncher, gıda israfı, yapay zeka gıda platformu, sosyal fayda teknolojisi",
+    "ozellikler": [
+      { "baslik": "Akıllı Eşleştirme", "aciklama": "Konum ve stok verisine göre en uygun alıcı-tedarikçi eşleştirmesi." },
+      { "baslik": "Gerçek Zamanlı Stok Takibi", "aciklama": "İşletmelerin gün sonu ürün fazlasını anlık olarak platforma tanımlaması." },
+      { "baslik": "Bağış Yönetimi", "aciklama": "STK ve belediyeler için şeffaf, izlenebilir bağış süreç yönetimi." },
+      { "baslik": "Sürdürülebilirlik Raporlama", "aciklama": "Önlenen gıda israfı ve sosyal etkinin ölçümlenebilir raporları." }
+    ]
+  },
+  {
+    "ad": "AIBazaar",
+    "slug": "aibazaar",
+    "siraNo": 4,
+    "kisaAciklama": "Sıfır komisyonlu e-ticaret platformu.",
+    "aciklama": "AIBazaar, satıcıları yüksek komisyon oranlarından kurtaran, sıfır komisyonlu ve yapay zeka destekli bir e-ticaret platformudur. Akıllı kategori ve ürün önerileri, otomatik SEO optimizasyonu ve kişiselleştirilmiş alışveriş deneyimiyle küçük ve orta ölçekli satıcıların dijital pazarda eşit şartlarda rekabet etmesini sağlar.",
+    "kullanimSenaryolari": "KOBİ ve bireysel satıcılar için komisyonsuz online mağaza açma; yapay zeka destekli ürün kategorileme ve SEO içerik üretimi; kişiselleştirilmiş ürün önerileriyle müşteri deneyimi artırma; çoklu satıcı pazaryeri yönetimi.",
+    "kapakGorseli": "/images/projects/aibazaar-launch.jfif",
+    "bannerGorseli": "/images/projects/aibazaar-poster-1.jfif",
+    "metaBaslik": "AIBazaar - Sıfır Komisyonlu Yapay Zeka Destekli E-Ticaret Platformu | SEZER AI Technology",
+    "metaAciklama": "AIBazaar, sıfır komisyon modeli ve yapay zeka destekli araçlarla satıcıların dijital pazarda eşit şartlarda büyümesini sağlayan e-ticaret platformudur.",
+    "metaAnahtarKelimeler": "AIBazaar, sıfır komisyon e-ticaret, yapay zeka e-ticaret, komisyonsuz pazaryeri",
+    "ozellikler": [
+      { "baslik": "Sıfır Komisyon Modeli", "aciklama": "Satıcılardan satış komisyonu alınmaz, şeffaf ve adil bir gelir modeli sunar." },
+      { "baslik": "Yapay Zeka Kategori Motoru", "aciklama": "Ürünlerin otomatik kategori/özellik ataması ve akıllı arama optimizasyonu." },
+      { "baslik": "Kişiselleştirilmiş Öneriler", "aciklama": "Kullanıcı davranışına göre dinamik ürün ve kampanya önerileri." },
+      { "baslik": "Satıcı Paneli ve Analitik", "aciklama": "Satış, stok ve performans verilerinin tek ekrandan izlenmesi." }
+    ]
+  }
+]

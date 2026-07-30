@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" role="img" aria-labelledby="ahTitle">
+  <title id="ahTitle">AI Hospital</title>
+  <defs>
+    <linearGradient id="ahBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a4a8a" />
+      <stop offset="100%" stop-color="#002855" />
+    </linearGradient>
+    <linearGradient id="ahGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#9a7512" />
+      <stop offset="50%" stop-color="#d4af37" />
+      <stop offset="100%" stop-color="#f2ca50" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="480" fill="url(#ahBg)" />
+  <circle cx="680" cy="80" r="150" fill="#ffffff" opacity="0.04" />
+  <circle cx="100" cy="430" r="170" fill="#ffffff" opacity="0.04" />
+
+  <!-- Hastane binasi -->
+  <g transform="translate(400,250)">
+    <rect x="-140" y="-40" width="280" height="150" rx="10" fill="#ffffff" opacity="0.95" />
+    <rect x="-160" y="-100" width="90" height="210" rx="8" fill="#ffffff" opacity="0.80" />
+    <rect x="70" y="-100" width="90" height="210" rx="8" fill="#ffffff" opacity="0.80" />
+
+    <!-- Pencereler -->
+    <g fill="#1a4a8a">
+      <rect x="-120" y="0" width="18" height="18" rx="3" />
+      <rect x="-88" y="0" width="18" height="18" rx="3" />
+      <rect x="-120" y="34" width="18" height="18" rx="3" />
+      <rect x="-88" y="34" width="18" height="18" rx="3" />
+      <rect x="70" y="0" width="18" height="18" rx="3" />
+      <rect x="102" y="0" width="18" height="18" rx="3" />
+      <rect x="70" y="34" width="18" height="18" rx="3" />
+      <rect x="102" y="34" width="18" height="18" rx="3" />
+    </g>
+
+    <!-- Ana giris + carpi -->
+    <rect x="-30" y="60" width="60" height="50" rx="4" fill="#1a4a8a" />
+    <g transform="translate(0,-25)">
+      <rect x="-34" y="-9" width="68" height="18" rx="5" fill="url(#ahGold)" />
+      <rect x="-9" y="-34" width="18" height="68" rx="5" fill="url(#ahGold)" />
+    </g>
+  </g>
+
+  <text x="400" y="440" text-anchor="middle" font-family="Montserrat, Arial, sans-serif" font-size="30" font-weight="800" fill="#ffffff">AI Hospital</text>
+</svg>

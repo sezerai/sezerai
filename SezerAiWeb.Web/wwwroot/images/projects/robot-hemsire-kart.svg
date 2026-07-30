@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" role="img" aria-labelledby="rhTitle">
+  <title id="rhTitle">Robot Hemşire</title>
+  <defs>
+    <linearGradient id="rhBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#002855" />
+      <stop offset="100%" stop-color="#1a4a8a" />
+    </linearGradient>
+    <linearGradient id="rhGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#9a7512" />
+      <stop offset="50%" stop-color="#d4af37" />
+      <stop offset="100%" stop-color="#f2ca50" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="480" fill="url(#rhBg)" />
+  <circle cx="120" cy="90" r="140" fill="#ffffff" opacity="0.04" />
+  <circle cx="700" cy="420" r="180" fill="#ffffff" opacity="0.04" />
+
+  <!-- Robot govdesi -->
+  <g transform="translate(400,235)">
+    <rect x="-95" y="-40" width="190" height="150" rx="26" fill="#ffffff" opacity="0.10" />
+    <rect x="-80" y="-120" width="160" height="110" rx="30" fill="#ffffff" opacity="0.95" />
+    <circle cx="-32" cy="-70" r="14" fill="#002855" />
+    <circle cx="32" cy="-70" r="14" fill="#002855" />
+    <rect x="-26" y="-32" width="52" height="10" rx="5" fill="#002855" />
+    <line x1="0" y1="-120" x2="0" y2="-150" stroke="#ffffff" stroke-width="6" opacity="0.95" />
+    <circle cx="0" cy="-158" r="12" fill="url(#rhGold)" />
+    <!-- Kalp / saglik carpisi -->
+    <g transform="translate(0,30)">
+      <rect x="-38" y="-10" width="76" height="20" rx="6" fill="url(#rhGold)" />
+      <rect x="-10" y="-38" width="20" height="76" rx="6" fill="url(#rhGold)" />
+    </g>
+  </g>
+
+  <text x="400" y="440" text-anchor="middle" font-family="Montserrat, Arial, sans-serif" font-size="30" font-weight="800" fill="#ffffff">Robot Hemşire</text>
+</svg>
