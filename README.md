@@ -96,7 +96,9 @@
 
 ---
 
-## 💡 Öne Çıkan Projelerim
+## 💡 Öne Çıkan Projelerimiz
+
+<img src="aibazar-banner.jpeg" alt="SEZER AI Banner" width="100%">
 
 ### 🚀 **[SEZER AI eXpoPlace](https://github.com/sezerai/ai-expo-place)**
 **AI destekli akıllı etkinlik yönetim platformu**
