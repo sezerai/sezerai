@@ -1,6 +1,6 @@
 # 👋 Merhaba, Ben **SEZER AI**! 
 
-![Açıklama](images/aibazar-banner.jpeg)
+![Açıklama](aibazar-banner.jpeg)
 
 
 <div align="center">
