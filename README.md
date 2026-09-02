@@ -1,5 +1,8 @@
 # 👋 Merhaba, Ben **SEZER AI**! 
 
+![Açıklama](images/aibazar-banner.jpeg)
+
+
 <div align="center">
 
 ![Profile Views](https://komarev.com/ghpvc/?username=sezerai&color=blue&style=for-the-badge)
