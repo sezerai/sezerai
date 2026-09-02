@@ -1,6 +1,7 @@
 # 👋 Merhaba, Ben **SEZER AI**! 
 
-![Açıklama](aibazar-banner.jpeg)
+<img src="aibazar-banner.jpeg" alt="SEZER AI Banner" width="100%">
+![Açıklama]
 
 
 <div align="center">
