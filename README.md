@@ -65,7 +65,7 @@
 
 ---
 
-## 🎯 Uzmanlık Alanlarım
+## 🎯 Uzmanlık Alanlarımız
 
 ### 🤖 **Yapay Zekâ & Makine Öğrenimi**
 - Derin öğrenme modelleri geliştirme
@@ -98,7 +98,7 @@
 
 ## 💡 Öne Çıkan Projelerimiz
 
-<img src="aibazar-banner.jpeg" alt="SEZER AI Banner" width="100%">
+<img src="1.png" alt="SEZER AI Banner" width="100%">
 
 ### 🚀 **[SEZER AI eXpoPlace](https://github.com/sezerai/ai-expo-place)**
 **AI destekli akıllı etkinlik yönetim platformu**
