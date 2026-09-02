@@ -79,6 +79,9 @@
 - Otonom robotik çözümler
 - Endüstri 4.0 uygulamaları
 
+<img src="5-step-workflow-sezer-ai-hospital.png" alt="SEZER AI Banner" width="100%">
+
+
 ### 🏥 **Sağlık Teknolojileri**
 - AI destekli teşhis sistemleri
 - Hasta izleme ve takip platformları
