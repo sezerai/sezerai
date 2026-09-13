@@ -26,13 +26,11 @@
 
 <div align="center">
 
-![Sezer's GitHub Stats](https://github-readme-stats.vercel.app/api?username=sezerai&show_icons=true&theme=radical&hide_border=true&include_all_commits=true&count_private=true&line_height=24)
+
 
 ![GitHub Streak](https://streak-stats.demolab.com/?user=sezerai&theme=radical&hide_border=true)
 
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=sezerai&layout=compact&theme=radical&hide_border=true&langs_count=8)
 
-![GitHub Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=sezerai&theme=github-dark&hide_border=true&area=true)
 
 </div>
 
